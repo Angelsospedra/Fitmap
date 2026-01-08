@@ -61,13 +61,7 @@ body {
 
 
 
-.bottom-nav button {
-  background: var(--color-main-1);
-  color: var(--gray-1);
-  border: none;
-  border-radius: 8px;
-  padding: 8px 16px;
-}
+
 .bottom-nav {
   height: 75px;
   padding: 19px 10px 20px 10px;
@@ -84,8 +78,8 @@ body {
 }
 
 .nav-btn {
-  background: none;       /* sin fondo del botón */
-  border: none;           /* sin borde */
+  background: none;   /* sin fondo */
+  border: none;       /* sin borde */
   padding: 0;
   cursor: pointer;
   display: flex;
@@ -94,9 +88,11 @@ body {
 }
 
 .nav-btn img {
-  width: 28px;            /* tamaño de icono */
-  height: 28px;
+  width: 40px;       /* tamaño exacto del icono */
+  height: 40px;
+  display: block;    /* evita espacio extra debajo de la imagen */
 }
+
 
 
 
