@@ -49,9 +49,9 @@ body {
   --color-main-4: #5BCDC4;
 
   /* Escala de grises */
-  --gray-1: #FBFBFB; /* más oscuro, texto principal */
-  --gray-2: #B1B1B1; /* texto secundario */
-  --gray-3: #7A7A7A; /* info / placeholders */
-  --gray-4: #464646; /* bordes suaves */
-  --gray-5: #262626; /* fondo claro */
+  --gray-1: #FBFBFB; 
+  --gray-2: #B1B1B1;
+  --gray-3: #7A7A7A;
+  --gray-4: #464646;
+  --gray-5: #262626;
 }
