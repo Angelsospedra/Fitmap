@@ -1,4 +1,22 @@
 /* =========================
+   PALETA DE COLORES
+========================= */
+:root {
+  /* Colores principales */
+  --color-main-1: #269088;
+  --color-main-2: #141414;
+  --color-main-3: #E0E0E0;
+  --color-main-4: #5BCDC4;
+
+  /* Escala de grises */
+  --gray-1: #FBFBFB; 
+  --gray-2: #B1B1B1;
+  --gray-3: #7A7A7A;
+  --gray-4: #464646;
+  --gray-5: #262626;
+}
+
+/* =========================
    1. RESET / BASE
 ========================= */
 *,
@@ -31,27 +49,56 @@ body {
 }
 
 .screen {
-  width: var(--width);
-  height: var(--height);
+  width: 393px;
+  height: 852px;
   background: var(--bg);
   border: 1px solid #aaa;
   overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end; /* empuja el nav al fondo */
 }
 
-/* =========================
-   PALETA DE COLORES
-========================= */
-:root {
-  /* Colores principales */
-  --color-main-1: #269088;
-  --color-main-2: #141414;
-  --color-main-3: #E0E0E0;
-  --color-main-4: #5BCDC4;
 
-  /* Escala de grises */
-  --gray-1: #FBFBFB; 
-  --gray-2: #B1B1B1;
-  --gray-3: #7A7A7A;
-  --gray-4: #464646;
-  --gray-5: #262626;
+
+.bottom-nav button {
+  background: var(--color-main-1);
+  color: var(--gray-1);
+  border: none;
+  border-radius: 8px;
+  padding: 8px 16px;
 }
+.bottom-nav {
+  height: 75px;
+  padding: 19px 10px 20px 10px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+
+  background: linear-gradient(
+    180deg, 
+    rgba(0, 0, 0, 0.81) 62.94%, 
+    rgba(0, 0, 0, 0.90) 99.99%
+  );
+}
+
+.nav-btn {
+  background: none;       /* sin fondo del botón */
+  border: none;           /* sin borde */
+  padding: 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.nav-btn img {
+  width: 28px;            /* tamaño de icono */
+  height: 28px;
+}
+
+
+
+
+
