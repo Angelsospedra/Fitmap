@@ -2,19 +2,22 @@
    PALETA DE COLORES
 ========================= */
 :root {
-  /* Colores principales */
-  --color-main-1: #269088;
-  --color-main-2: #141414;
-  --color-main-3: #E0E0E0;
-  --color-main-4: #5BCDC4;
+    --color-main-1: #269088;
+    --color-main-2: #141414;
+    --color-main-3: #E0E0E0;
+    --color-main-4: #5BCDC4;
 
-  /* Escala de grises */
-  --gray-1: #FBFBFB; 
-  --gray-2: #B1B1B1;
-  --gray-3: #7A7A7A;
-  --gray-4: #464646;
-  --gray-5: #262626;
+    --gray-1: #FBFBFB;
+    --gray-2: #B1B1B1;
+    --gray-3: #7A7A7A;
+    --gray-4: #464646;
+    --gray-5: #262626;
+
+    --bg: #F8F9FC;
+    --width: 393px;
+    --height: 852px;
 }
+
 
 /* =========================
    1. RESET / BASE
@@ -22,78 +25,62 @@
 *,
 *::before,
 *::after {
-  box-sizing: border-box;
-  margin: 0;
-  padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
 }
 
 /* =========================
    2. VARIABLES
 ========================= */
 :root {
-  --bg: #F8F9FC;
-  --width: 393px;
-  --height: 852px;
+    --bg: #F8F9FC;
+    --width: 393px;
+    --height: 852px;
 }
 
 /* =========================
    3. LAYOUT PANTALLA
 ========================= */
 body {
-  display: flex;
-  justify-content: center;
-  align-items: flex-start;
-  min-height: 100vh;
-  background: #ddd;
-  font-family: 'Inter', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background: #ddd;
+    font-family: 'Inter', sans-serif;
 }
 
 .screen {
-  width: 393px;
-  height: 852px;
-  background: var(--bg);
-  overflow-y: auto;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end; /* empuja el nav al fondo */
+    width: 393px;
+    height: 852px;
+    background: var(--bg);
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    /* empuja el nav al fondo */
 }
-
-
-
 
 .bottom-nav {
-  height: 75px;
-  padding: 19px 10px 20px 10px;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap: 35px;
+    height: 75px;
+    padding: 19px 10px 20px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 35px;
 
-  background: linear-gradient(
-    180deg, 
-    rgba(0, 0, 0, 0.81) 62.94%, 
-    rgba(0, 0, 0, 0.90) 99.99%
-  );
+    background: linear-gradient(180deg,
+            rgba(0, 0, 0, 0.81) 62.94%,
+            rgba(0, 0, 0, 0.90) 99.99%);
 }
 
-.nav-btn {
-  background: none;   /* sin fondo */
-  border: none;       /* sin borde */
-  padding: 0;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-.nav-btn img {
-  width: 40px;       /* tamaño exacto del icono */
+.nav-btn svg {
+  width: 40px;
   height: 40px;
-  display: block;    /* evita espacio extra debajo de la imagen */
+  color: var(--gray-3); /* color normal */
 }
 
-
-
-
-
-
+.nav-btn.active svg {
+  color: var(--color-main-1); /* color activo */
+}
