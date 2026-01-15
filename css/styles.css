@@ -45,10 +45,17 @@
 body {
     display: flex;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     min-height: 100vh;
     background: #ddd;
-    font-family: 'Inter', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    padding: 20px 0;
+}
+
+/* Apply Poppins to form controls and buttons */
+body, button, input, textarea, select {
+    font-family: 'Poppins', sans-serif;
 }
 
 .screen {
@@ -58,8 +65,9 @@ body {
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    /* empuja el nav al fondo */
+    justify-content: space-between;
+    align-items: center;
+    padding: 32px 24px;
 }
 
 .bottom-nav {
@@ -83,4 +91,83 @@ body {
 
 .nav-btn.active svg {
   color: var(--color-main-1); /* color activo */
+}
+
+/* =========================
+   HERO SECTION
+========================= */
+.hero {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    flex: 1;
+    padding-bottom: 40px;
+}
+
+.logo {
+    width: 180px;
+    height: 180px;
+    display: block;
+}
+
+.hero h1 {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--color-main-2);
+    text-align: center;
+    margin: 0;
+}
+
+.hero p {
+    font-size: 14px;
+    font-weight: 400;
+    color: var(--gray-3);
+    text-align: center;
+    margin: 0;
+}
+
+/* =========================
+   CONTENT & BUTTONS
+========================= */
+.content {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 24px;
+    padding-bottom: 60px;
+}
+
+.btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    border: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+.btn-primary {
+    width: 266px;
+    height: 56px;
+    border-radius: 50px;
+    background: var(--color-main-1);
+    color: #ffffff;
+    font-size: 16px;
+    margin: 0;
+}
+
+.btn-primary:hover {
+    background: #1f7a71;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(38, 144, 136, 0.3);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+    box-shadow: 0 2px 6px rgba(38, 144, 136, 0.2);
 }
