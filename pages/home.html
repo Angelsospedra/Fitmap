@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
     <link rel="stylesheet" href="../css/navbar.css">
     <link rel="stylesheet" href="../css/home.css">
 </head>
+
 <body>
     <div class="screen">
         <!-- Contenido de la pantalla -->
@@ -15,7 +17,7 @@
             <!-- Header -->
             <header class="header">
                 <div class="logo-container">
-                    <img src="../source/svgs/LogoHome.svg" alt="FITMAP" class="logo">
+                    <img src="../source/Branding/LogoHome.svg" alt="FITMAP" class="logo">
                 </div>
                 <h1 class="page-title">Home</h1>
                 <button class="settings-btn">
@@ -23,10 +25,10 @@
                 </button>
             </header>
 
-            <!-- Recomendaciones -->
+
             <section class="recommendations">
                 <h2 class="section-title">Recomendaciones</h2>
-                
+
                 <div class="recommendation-card">
                     <a href="#" class="card-image-link">
                         <div class="card-image stadium">
@@ -37,7 +39,7 @@
                         </div>
                     </a>
                     <div class="card-location">
-                        <img src="../source/svgs/LogoLocation.svg" alt="Ubicación" width="14" height="14">
+                        <img src="../source/Branding/LogoLocation.svg" alt="Ubicación" width="14" height="14">
                         <span>Avenida de Suecia, Valencia</span>
                     </div>
                 </div>
@@ -52,7 +54,7 @@
                         </div>
                     </a>
                     <div class="card-location">
-                        <img src="../source/svgs/LogoLocation.svg" alt="Ubicación" width="14" height="14">
+                        <img src="../source/Branding/LogoLocation.svg" alt="Ubicación" width="14" height="14">
                         <span>Avenida Baleares, Valencia</span>
                     </div>
                 </div>
@@ -67,7 +69,7 @@
                         </div>
                     </a>
                     <div class="card-location">
-                        <img src="../source/svgs/LogoLocation.svg" alt="Ubicación" width="14" height="14">
+                        <img src="../source/Branding/LogoLocation.svg" alt="Ubicación" width="14" height="14">
                         <span>Av. Hms Maristas, Valencia</span>
                     </div>
                 </div>
@@ -82,7 +84,7 @@
                         </div>
                     </a>
                     <div class="card-location">
-                        <img src="../source/svgs/LogoLocation.svg" alt="Ubicación" width="14" height="14">
+                        <img src="../source/Branding/LogoLocation.svg" alt="Ubicación" width="14" height="14">
                         <span>Valencia</span>
                     </div>
                 </div>
@@ -91,22 +93,23 @@
 
         <!-- Bottom Nav -->
         <nav class="bottom-nav">
-            <button class="nav-btn active">
-                <img src="../source/svgs/Home_Off.svg" alt="Inicio">
-            </button>
-            <button class="nav-btn">
+            <a class="nav-btn active" href="home.html" aria-label="Inicio">
+                <img src="../source/svgs/Home_On.svg" alt="Inicio">
+            </a>
+
+            <a class="nav-btn" href="reservas.html" aria-label="Reservas">
                 <img src="../source/svgs/Reservation_Off.svg" alt="Reservas">
-            </button>
-            <button class="nav-btn">
+            </a>
+
+            <a class="nav-btn" href="buscar.html" aria-label="Buscar">
                 <img src="../source/svgs/Search_Off.svg" alt="Buscar">
-            </button>
-            <button class="nav-btn">
-                <img src="../source/svgs/Movie_Off.svg" alt="Buscar">
-            </button>
-            <button class="nav-btn">
-                <img src="../source/svgs/Account_Off.svg" alt="Buscar">
-            </button>
+            </a>
+
+            <a class="nav-btn" href="reels.html" aria-label="Cine">
+                <img src="../source/svgs/Movie_Off.svg" alt="Cine">
+            </a>
+
+            <a class="nav-btn" href="cuenta.html" aria-label="Cuenta">
+                <img src="../source/svgs/Account_Off.svg" alt="Cuenta">
+            </a>
         </nav>
-    </div>
-</body>
-</html>

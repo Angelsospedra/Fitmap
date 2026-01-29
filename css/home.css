@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
 /* Content - ajustado para trabajar con el layout de main.css */
 .content {
     flex: 0 1 auto;
@@ -54,8 +61,9 @@
     opacity: 0.7;
 }
 
-/* Recomendaciones */
-.recommendations {
+/* Recomendaciones y Completadas - estilos compartidos */
+.recommendations,
+.completed-section {
     padding: 0 20px 20px 20px;
 }
 
@@ -99,7 +107,8 @@
 
 .card-image.stadium {
     background-image: url("../source/imgs/Mestalla.png");
-    background-color: #C8D5B9; /* fallback si no carga */
+    background-color: #C8D5B9;
+    /* fallback si no carga */
 }
 
 .card-image.tennis {
@@ -113,7 +122,7 @@
 }
 
 .card-image.municipal {
-    background-image: url("../source/imgs/Municipal.png");
+    background-image: url("../source/imgs/Baseball.png");
     background-color: #D4E7D4;
 }
 
