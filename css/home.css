@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+
 /* Content - ajustado para trabajar con el layout de main.css */
 .content {
     flex: 0 1 auto;
@@ -10,7 +17,7 @@
     display: grid;
     grid-template-columns: 1fr auto 1fr;
     align-items: center;
-    padding: 50px 20px 16px 20px;
+    padding: 66px 20px 20px 20px;
     background-color: var(--bg);
 }
 
@@ -54,8 +61,9 @@
     opacity: 0.7;
 }
 
-/* Recomendaciones */
-.recommendations {
+/* Recomendaciones y Completadas - estilos compartidos */
+.recommendations,
+.completed-section {
     padding: 0 20px 20px 20px;
 }
 
@@ -74,6 +82,18 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
 }
 
+/* Enlace de la imagen - clickeable */
+.card-image-link {
+    display: block;
+    text-decoration: none;
+    cursor: pointer;
+    transition: opacity 0.2s;
+}
+
+.card-image-link:hover {
+    opacity: 0.95;
+}
+
 .card-image {
     width: 100%;
     height: 180px;
@@ -86,22 +106,23 @@
 }
 
 .card-image.stadium {
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect fill="%23C8D5B9" width="100" height="100"/></svg>');
+    background-image: url("../source/imgs/Mestalla.png");
     background-color: #C8D5B9;
+    /* fallback si no carga */
 }
 
 .card-image.tennis {
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect fill="%2387CEEB" width="100" height="100"/></svg>');
+    background-image: url("../source/imgs/Tennis.png");
     background-color: #87CEEB;
 }
 
 .card-image.fountain {
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect fill="%23B4A89A" width="100" height="100"/></svg>');
+    background-image: url("../source/imgs/Fonteta.png");
     background-color: #B4A89A;
 }
 
 .card-image.municipal {
-    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect fill="%23D4E7D4" width="100" height="100"/></svg>');
+    background-image: url("../source/imgs/Baseball.png");
     background-color: #D4E7D4;
 }
 
@@ -118,8 +139,9 @@
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-.card-label svg {
+.card-label img {
     flex-shrink: 0;
+    display: block;
 }
 
 .card-location {
@@ -129,8 +151,9 @@
     gap: 8px;
 }
 
-.card-location svg {
+.card-location img {
     flex-shrink: 0;
+    display: block;
 }
 
 .card-location span {
