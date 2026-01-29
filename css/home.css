@@ -1,0 +1,157 @@
+/* Content - ajustado para trabajar con el layout de main.css */
+.content {
+    flex: 0 1 auto;
+    overflow-y: auto;
+    width: 100%;
+}
+
+/* Header */
+.header {
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+    padding: 50px 20px 16px 20px;
+    background-color: var(--bg);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-self: start;
+}
+
+.logo {
+    height: 21px;
+    width: auto;
+}
+
+.page-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-main-2);
+    text-align: center;
+    justify-self: center;
+}
+
+.settings-btn {
+    background: none;
+    border: none;
+    padding: 8px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+    justify-self: end;
+}
+
+.settings-btn img {
+    width: 24px;
+    height: 24px;
+}
+
+.settings-btn:hover {
+    opacity: 0.7;
+}
+
+/* Recomendaciones */
+.recommendations {
+    padding: 0 20px 20px 20px;
+}
+
+.section-title {
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-main-2);
+    margin-bottom: 16px;
+}
+
+.recommendation-card {
+    background: #FFFFFF;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.card-image {
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    padding: 16px;
+}
+
+.card-image.stadium {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect fill="%23C8D5B9" width="100" height="100"/></svg>');
+    background-color: #C8D5B9;
+}
+
+.card-image.tennis {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect fill="%2387CEEB" width="100" height="100"/></svg>');
+    background-color: #87CEEB;
+}
+
+.card-image.fountain {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect fill="%23B4A89A" width="100" height="100"/></svg>');
+    background-color: #B4A89A;
+}
+
+.card-image.municipal {
+    background-image: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100"><rect fill="%23D4E7D4" width="100" height="100"/></svg>');
+    background-color: #D4E7D4;
+}
+
+.card-label {
+    background: #FFFFFF;
+    border-radius: 20px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-main-2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.card-label svg {
+    flex-shrink: 0;
+}
+
+.card-location {
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.card-location svg {
+    flex-shrink: 0;
+}
+
+.card-location span {
+    font-size: 14px;
+    color: var(--color-main-2);
+}
+
+/* Scrollbar personalizada */
+.content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: var(--gray-2);
+    border-radius: 3px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+    background: var(--gray-3);
+}
