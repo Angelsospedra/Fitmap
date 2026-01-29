@@ -1,0 +1,137 @@
+/* =========================
+   PROFILE PAGE STYLES
+========================= */
+
+/* Contenedor principal de perfil */
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px 60px 20px;
+    gap: 40px;
+    flex: 1;
+}
+
+/* =====================
+   FOTO DE PERFIL
+===================== */
+.profile-photo-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+    position: relative;
+}
+
+.profile-photo {
+    width: 140px;
+    height: 140px;
+    border-radius: 50%;
+    border: 3px solid var(--color-main-2);
+    overflow: hidden;
+    background: var(--gray-1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.profile-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.edit-btn {
+    background: none;
+    border: none;
+    color: var(--color-main-1);
+    font-size: 12px;
+    font-weight: 500;
+    cursor: pointer;
+    text-decoration: none;
+    transition: opacity 0.2s ease;
+}
+
+.edit-btn:hover {
+    opacity: 0.8;
+}
+
+/* =====================
+   BOTONES DE OPCIONES
+===================== */
+.profile-options {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    width: 100%;
+    max-width: 260px;
+}
+
+.option-btn {
+    width: 100%;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--color-main-1);
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    font-family: 'Inter', sans-serif;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.option-btn:hover {
+    background-color: var(--color-main-4);
+    transform: translateY(-2px);
+}
+
+.option-btn:active {
+    transform: translateY(0);
+}
+
+/* =====================
+   CERRAR SESIÓN
+===================== */
+.logout-section {
+    margin-top: auto;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
+.logout-btn {
+    background: none;
+    border: none;
+    color: #C41E3A;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    text-decoration: underline;
+    transition: opacity 0.2s ease;
+}
+
+.logout-btn:hover {
+    opacity: 0.8;
+}
+
+/* =====================
+   RESPONSIVE
+===================== */
+@media (max-height: 700px) {
+    .profile-container {
+        padding: 30px 20px 60px 20px;
+        gap: 30px;
+    }
+
+    .profile-photo {
+        width: 120px;
+        height: 120px;
+    }
+
+    .option-btn {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+}
