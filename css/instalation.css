@@ -1,0 +1,203 @@
+/* Content - ajustado para trabajar con el layout de main.css */
+.content {
+    flex: 0 1 auto;
+    overflow-y: auto;
+    width: 100%;
+    background-color: var(--bg);
+}
+
+/* Header con imagen */
+.instalation-header {
+    width: 100%;
+    position: relative;
+}
+
+.header-image {
+    width: 100%;
+    height: 280px;
+    background-image: url("../../source/imgs/Baseball.png");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    padding: 66px 20px 20px 20px;
+    /* Overlay oscuro para hacer la imagen más oscura */
+    background-color: rgba(0, 0, 0, 0.3);
+    background-blend-mode: multiply;
+}
+
+.back-btn {
+    background: rgba(0, 0, 0, 0.3);
+    backdrop-filter: blur(10px);
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.back-btn img {
+    display: block;
+}
+
+/* Info de la instalación - contenedor recto sin border-radius */
+.instalation-info {
+    padding: 24px 20px;
+    background: white;
+    margin-top: 0;
+    position: relative;
+    z-index: 1;
+}
+
+.info-row {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.info-row:last-child {
+    margin-bottom: 0;
+}
+
+.info-row img {
+    flex-shrink: 0;
+}
+
+/* Todos los textos del mismo tamaño sin negrita */
+.instalation-text {
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--color-main-2);
+    margin: 0;
+}
+
+/* Botón Reservar */
+.reserve-container {
+    padding: 0 20px 24px 20px;
+    background: white;
+}
+
+.reserve-btn {
+    width: 100%;
+    background: var(--color-main, #269088);
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    display: block;
+}
+
+/* Reseñas */
+.reviews-section {
+    padding: 0 20px 20px 20px;
+    background: white;
+}
+
+.reviews-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-main-2);
+    margin-bottom: 16px;
+}
+
+.rating-summary {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.rating-number {
+    font-size: 32px;
+    font-weight: 700;
+    color: var(--color-main-2);
+}
+
+.stars-container {
+    display: flex;
+    gap: 4px;
+}
+
+.star {
+    width: 32px;
+    height: 32px;
+}
+
+/* Review cards */
+.review-card {
+    background: white;
+    border: 1px solid #E5E5E5;
+    border-radius: 16px;
+    padding: 16px;
+    margin-bottom: 12px;
+}
+
+.review-header {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+}
+
+.user-avatar {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.review-user-info {
+    flex: 1;
+}
+
+.user-name {
+    display: block;
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--color-main-2);
+    margin-bottom: 4px;
+}
+
+.review-stars {
+    display: flex;
+    gap: 2px;
+}
+
+.star-small {
+    width: 16px;
+    height: 16px;
+}
+
+.review-text {
+    font-size: 14px;
+    color: var(--color-main-2);
+    margin: 0;
+    line-height: 1.5;
+}
+
+/* Scrollbar personalizada */
+.content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: var(--gray-2);
+    border-radius: 3px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+    background: var(--gray-3);
+}
