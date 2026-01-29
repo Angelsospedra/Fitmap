@@ -72,13 +72,14 @@ body {
 
 /* Logo completo */
 .logo-container {
-    margin-bottom: 93px;
+    margin-bottom: 73px;
     flex-shrink: 0;
 }
 
 .logo-full {
-    width: 209px;
-    height: auto;
+   width: 291px;
+    height: 291px;
+    aspect-ratio: 1/1;
     display: block;
 }
 
@@ -98,19 +99,20 @@ body {
     padding: 20.81px 57px;
     border: none;
     border-radius: 999px;
-    font-size: 20px;
-    font-weight: 500;
     cursor: pointer;
-    transition: all 0.3s ease;
     text-align: center;
     text-decoration: none;
     display: flex;
     align-items: center;
     justify-content: center;
-    font-family: 'Poppins', sans-serif;
-    box-sizing: border-box;
+    font-family: Poppins;
+font-size: 21px;
+font-style: normal;
+font-weight: 500;
+line-height: normal;
 }
-
+a{text-decoration: none;
+color: white;}
 .btn-primary {
     background: var(--color-main-1);
     color: white;
@@ -119,12 +121,7 @@ body {
 .btn-secondary {
     background: var(--color-main-1);
     color: white;
-}
-
-
-.btn-secondary:active {
-    transform: translateY(0);
-}
+}   
 
 /* =========================
    4. RESPONSIVE
