@@ -1,3 +1,6 @@
+/* Importa la fuente Poppins de Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
 /* =========================
    PROFILE PAGE STYLES
 ========================= */
@@ -62,39 +65,42 @@
 .profile-options {
     display: flex;
     flex-direction: column;
-    gap: 12px;
+    gap: 34px;
     width: 100%;
     max-width: 260px;
 }
 
 .option-btn {
-    width: 100%;
-    padding: 12px 24px;
+    display: flex;
+    width: 266px;
+    height: 45px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     border: none;
     border-radius: 25px;
     background-color: var(--color-main-1);
-    color: white;
-    font-size: 14px;
-    font-weight: 500;
-    font-family: 'Inter', sans-serif;
     cursor: pointer;
     transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
-.option-btn:hover {
-    background-color: var(--color-main-4);
-    transform: translateY(-2px);
-}
-
-.option-btn:active {
-    transform: translateY(0);
+.option-btn span,
+.option-btn {
+    color: var(--grey-scale-grey-scale-white, #F5F5F5);
+    text-align: center;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
 }
 
 /* =====================
    CERRAR SESIÓN
 ===================== */
 .logout-section {
-    margin-top: auto;
+    margin-top: 120px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -102,11 +108,21 @@
 }
 
 .logout-btn {
+    display: flex;
+    width: 194px;
+    height: 45px;
+    padding: 10px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
     background: none;
     border: none;
     color: #C41E3A;
-    font-size: 14px;
-    font-weight: 600;
+    font-size: 20px;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
     cursor: pointer;
     text-decoration: underline;
     transition: opacity 0.2s ease;
@@ -116,22 +132,3 @@
     opacity: 0.8;
 }
 
-/* =====================
-   RESPONSIVE
-===================== */
-@media (max-height: 700px) {
-    .profile-container {
-        padding: 30px 20px 60px 20px;
-        gap: 30px;
-    }
-
-    .profile-photo {
-        width: 120px;
-        height: 120px;
-    }
-
-    .option-btn {
-        padding: 10px 20px;
-        font-size: 13px;
-    }
-}
