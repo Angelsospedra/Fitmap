@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=393, initial-scale=1.0">
+    <title>Fitmap - Registro</title>
+    <link rel="stylesheet" href="../css/registro.css">
+</head>
+ 
+<body>
+    <div class="screen">
+        <!-- Contenido del formulario -->
+        <div class="content">
+            
+            <div class="header-section">
+    <button class="back-button" aria-label="Volver">
+        <a href="landing.html">
+            <img src="../source/svgs/ArrowBack.svg" alt="Volver" class="arrow-icon">
+        </a>
+    </button>
+    <div class="logo-container">
+        <img src="../source/Branding/vertical_logo.svg" alt="Fitmap" class="logo-vertical">
+    </div>
+</div>
+
+            <h1 class="title">Crear cuenta</h1>
+
+            <form class="register-form" id="registerForm">
+                <!-- Nombre -->
+                <div class="form-group">
+                    <label for="nombre" class="form-label">Nombre</label>
+                    <input 
+                        type="text" 
+                        id="nombre" 
+                        name="nombre" 
+                        class="form-input" 
+                        placeholder="Juan"
+                        required
+                    >
+                </div>
+
+                <!-- Apellidos -->
+                <div class="form-group">
+                    <label for="apellidos" class="form-label">Apellidos</label>
+                    <input 
+                        type="text" 
+                        id="apellidos" 
+                        name="apellidos" 
+                        class="form-input" 
+                        placeholder="García Sanchez"
+                        required
+                    >
+                </div>
+
+                <!-- Correo -->
+                <div class="form-group">
+                    <label for="correo" class="form-label">Correo</label>
+                    <input 
+                        type="email" 
+                        id="correo" 
+                        name="correo" 
+                        class="form-input" 
+                        placeholder="juan@mail.com"
+                        required
+                    >
+                </div>
+
+                <!-- Teléfono -->
+                <div class="form-group">
+                    <label for="telefono" class="form-label">Teléfono</label>
+                    <div class="phone-input-group">
+                        <input 
+                            type="text" 
+                            class="form-input phone-prefix" 
+                            value="+34"
+                            readonly
+                        >
+                        <input 
+                            type="tel" 
+                            id="telefono" 
+                            name="telefono" 
+                            class="form-input phone-number" 
+                            placeholder="604204512"
+                            required
+                        >
+                    </div>
+                </div>
+
+                <!-- Contraseña -->
+                <div class="form-group">
+                    <label for="contrasena" class="form-label">Contraseña</label>
+                    <input 
+                        type="password" 
+                        id="contrasena" 
+                        name="contrasena" 
+                        class="form-input" 
+                        placeholder="••••••••••••••••"
+                        required
+                    >
+                </div>
+
+                <!-- Botón confirmar -->
+                 <div class="spacer">
+                <button type="submit" class="btn-confirm ">Confirmar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
