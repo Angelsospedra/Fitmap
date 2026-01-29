@@ -62,7 +62,6 @@
     line-height: normal;
     cursor: pointer;
     text-decoration: none;
-    transition: opacity 0.2s ease;
     margin-left: 240px;
     margin-top: 0px;
 }
@@ -91,7 +90,6 @@
     border-radius: 25px;
     background-color: var(--color-main-1);
     cursor: pointer;
-    transition: background-color 0.3s ease, transform 0.2s ease;
     color: var(--grey-scale-grey-scale-white, #F5F5F5);
     text-align: center;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
@@ -100,7 +98,6 @@
     font-weight: 500;
     line-height: normal;
 }
-
 
 
 /* =====================
@@ -132,5 +129,121 @@
     line-height: normal;
     cursor: pointer;
     text-decoration: underline;
-    transition: opacity 0.2s ease;
+}
+
+/* =========================
+   PERSONAL INFO PAGE STYLES
+========================= */
+
+/* Header con botón atrás y título */
+.personal-info-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 16px 20px;  /* Reducir padding si es necesario */
+    background-color: transparent;
+    border-bottom: none;
+}
+
+.back-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: var(--main-main-black, #141414);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40px;
+    height: 40px;
+    flex-shrink: 0;
+    padding: 0;
+}
+
+.page-title {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-size: 22px;
+    font-weight: 600;
+    color: var(--main-main-black, #141414);
+    margin: 0;
+    flex: 1;
+}
+
+/* =====================
+   CONTENEDOR PRINCIPAL PERSONAL INFO
+===================== */
+.personal-info-container {
+    display: flex;
+    flex-direction: column;
+    padding: 32px 20px 100px 20px;
+    gap: 20px;
+    width: 100%;
+    flex: 1;
+}
+
+/* =====================
+   FORMULARIO
+===================== */
+.personal-info-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    width: 100%;
+}
+
+.form-group label {
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    color: var(--main-main-black, #141414);
+    margin: 0;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 12px 16px;
+    border: 2px solid var(--main-main-black, #141414);
+    border-radius: 25px;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: var(--main-main-black, #141414);
+    background-color: transparent;
+    box-sizing: border-box;
+}
+
+.form-group input::placeholder {
+    color: #999999;
+}
+
+/* =====================
+   TELÉFONO CON CÓDIGO PAÍS
+===================== */
+.phone-input-group {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    width: 100%;
+}
+
+.country-code {
+    width: 70px !important;
+    flex-shrink: 0;
+    text-align: center;
+    font-weight: 500;
+    background-color: #F5F5F5 !important;
+}
+
+.phone-number {
+    flex: 1;
+}
+
+a{
+
+    text-decoration: none;
 }
