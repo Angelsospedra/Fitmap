@@ -16,6 +16,7 @@ likeBtn.addEventListener('click', (e) => {
 
 const reels = document.querySelectorAll('.reel');
 const videos = document.querySelectorAll('.reel-video');
+const progressFill = document.querySelector('.progress-fill');
 
 // Observer para detectar reel visible
 const observer = new IntersectionObserver(
@@ -38,6 +39,14 @@ const observer = new IntersectionObserver(
 
 // Observamos cada reel
 reels.forEach(reel => observer.observe(reel));
+
+// Actualizar barra de progreso
+videos.forEach(video => {
+    video.addEventListener('timeupdate', () => {
+        const progress = (video.currentTime / video.duration) * 100;
+        progressFill.style.width = progress + '%';
+    });
+});
 
 /* ------------------
    LIKE BUTTON
