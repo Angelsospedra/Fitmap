@@ -87,7 +87,7 @@ body {
 /* Filtros */
 .filters-container {
     display: flex;
-    gap: 12px;
+    gap: 10px;
     padding: 0 20px 20px 20px;
     overflow-x: auto;
     background-color: var(--bg);
@@ -101,30 +101,30 @@ body {
 .filter-chip {
     background: #D1D5DB;
     border: none;
-    border-radius: 50px;
-    padding: 10px 20px;
+    border-radius: 20px;
+    padding: 0;
     font-size: 14px;
     font-weight: 500;
-    color: var(--color-main-2);
+    color: #1F2937;
     cursor: pointer;
     flex-shrink: 0;
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 44px;
     transition: all 0.2s ease;
 }
 
-/* Botones con iconos - tamaño fijo circular */
-.filter-chip:has(img) {
-    width: 56px;
-    min-width: 56px;
-    padding: 0;
+/* Botones con iconos - tamaño fijo según Figma */
+.filter-chip:has(.material-symbols-outlined) {
+    width: 53px;
+    height: 24px;
+    min-width: 53px;
 }
 
 /* Botón "Todos" - ancho automático */
-.filter-chip:not(:has(img)) {
-    padding: 10px 24px;
+.filter-chip:not(:has(.material-symbols-outlined)) {
+    padding: 0 20px;
+    height: 24px;
     min-width: auto;
 }
 
@@ -133,10 +133,14 @@ body {
     color: white;
 }
 
-.filter-chip img {
-    display: block;
-    width: 24px;
-    height: 24px;
+.filter-chip .material-symbols-outlined {
+    font-size: 18px;
+    color: #1F2937;
+    transition: color 0.2s ease;
+}
+
+.filter-chip.active .material-symbols-outlined {
+    color: white;
 }
 
 /* Instalaciones */

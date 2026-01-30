@@ -155,30 +155,6 @@ searchInput.addEventListener('focus', (e) => {
 // Manejo de filtros
 const filterChips = document.querySelectorAll('.filter-chip');
 
-// Mapa de iconos para cada deporte
-const sportIcons = {
-    football: {
-        off: '../source/svgs/Football.svg',
-        on: '../source/svgs/FilterFootball_On.svg'
-    },
-    basketball: {
-        off: '../source/svgs/Basketball.svg',
-        on: '../source/svgs/FilterBasketball_On.svg'
-    },
-    tennis: {
-        off: '../source/svgs/Tennis.svg',
-        on: '../source/svgs/FilterTennis_On.svg'
-    },
-    baseball: {
-        off: '../source/svgs/Baseball.svg',
-        on: '../source/svgs/FilterBaseball_On.svg'
-    },
-    gym: {
-        off: '../source/svgs/Gym.svg',
-        on: '../source/svgs/FilterGym_On.svg'
-    }
-};
-
 filterChips.forEach(chip => {
     chip.addEventListener('click', () => {
         const sport = chip.getAttribute('data-sport');
@@ -186,25 +162,10 @@ filterChips.forEach(chip => {
         // Remover active de todos los chips
         filterChips.forEach(c => {
             c.classList.remove('active');
-            
-            // Restaurar icono original si tiene imagen
-            const img = c.querySelector('img');
-            const chipSport = c.getAttribute('data-sport');
-            if (img && chipSport && chipSport !== 'all' && sportIcons[chipSport]) {
-                img.src = sportIcons[chipSport].off;
-            }
         });
         
         // Activar el chip clickeado
         chip.classList.add('active');
-        
-        // Cambiar a icono "on" si tiene imagen
-        if (sport && sport !== 'all' && sportIcons[sport]) {
-            const img = chip.querySelector('img');
-            if (img) {
-                img.src = sportIcons[sport].on;
-            }
-        }
         
         // Aquí puedes agregar la lógica de filtrado
         console.log('Filtro seleccionado:', sport);
