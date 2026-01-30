@@ -4,16 +4,17 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-
-
-
-
 /* Content */
 .content {
     flex: 0 1 auto;
     overflow-y: auto;
     width: 100%;
     background-color: var(--bg);
+    transition: margin-bottom 0.3s ease;
+}
+
+.content.keyboard-active {
+    margin-bottom: 330px;
 }
 
 /* Header */
@@ -58,6 +59,11 @@ body {
     border: 1px solid #E5E5E5;
     border-radius: 50px;
     padding: 12px 20px;
+    transition: border-color 0.2s ease;
+}
+
+.search-box.active {
+    border-color: var(--color-main, #269088);
 }
 
 .search-box svg {
@@ -70,6 +76,8 @@ body {
     outline: none;
     font-size: 14px;
     color: var(--color-main-2);
+    cursor: pointer;
+    user-select: none;
 }
 
 .search-input::placeholder {
@@ -79,7 +87,7 @@ body {
 /* Filtros */
 .filters-container {
     display: flex;
-    gap: 8px;
+    gap: 12px;
     padding: 0 20px 20px 20px;
     overflow-x: auto;
     background-color: var(--bg);
@@ -91,10 +99,10 @@ body {
 }
 
 .filter-chip {
-    background: white;
-    border: 1px solid #E5E5E5;
+    background: #D1D5DB;
+    border: none;
     border-radius: 50px;
-    padding: 8px 16px;
+    padding: 10px 20px;
     font-size: 14px;
     font-weight: 500;
     color: var(--color-main-2);
@@ -103,18 +111,32 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-    min-width: 48px;
-    height: 40px;
+    height: 44px;
+    transition: all 0.2s ease;
+}
+
+/* Botones con iconos - tamaño fijo circular */
+.filter-chip:has(img) {
+    width: 56px;
+    min-width: 56px;
+    padding: 0;
+}
+
+/* Botón "Todos" - ancho automático */
+.filter-chip:not(:has(img)) {
+    padding: 10px 24px;
+    min-width: auto;
 }
 
 .filter-chip.active {
     background: var(--color-main, #269088);
     color: white;
-    border-color: var(--color-main, #269088);
 }
 
 .filter-chip img {
     display: block;
+    width: 24px;
+    height: 24px;
 }
 
 /* Instalaciones */
@@ -211,4 +233,169 @@ body {
 
 .content::-webkit-scrollbar-thumb:hover {
     background: var(--gray-3);
+}
+
+/* iOS Keyboard Styles */
+.keyboard-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 999;
+}
+
+.keyboard-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.ios-keyboard {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #D1D5DB;
+    border-radius: 16px 16px 0 0;
+    padding: 8px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.ios-keyboard.active {
+    transform: translateY(0);
+}
+
+.keyboard-toolbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 16px;
+    background: #D1D5DB;
+    border-bottom: 1px solid #9CA3AF;
+}
+
+.toolbar-btn {
+    background: none;
+    border: none;
+    color: var(--color-main, #269088);
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+.toolbar-btn.done {
+    font-weight: 600;
+}
+
+.keyboard-rows {
+    padding: 4px;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.keyboard-row.bottom-row {
+    gap: 6px;
+}
+
+.key {
+    background: white;
+    border: none;
+    border-radius: 6px;
+    min-width: 32px;
+    height: 42px;
+    font-size: 22px;
+    font-weight: 400;
+    color: #000;
+    cursor: pointer;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+    transition: all 0.1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.key:active {
+    background: #D1D5DB;
+    transform: scale(0.95);
+}
+
+.key.shift,
+.key.delete {
+    background: #AEB4BE;
+    color: #000;
+    min-width: 42px;
+}
+
+.key.shift.active {
+    background: white;
+    color: #000;
+}
+
+.key.numbers {
+    background: #AEB4BE;
+    color: #000;
+    min-width: 48px;
+    font-size: 16px;
+}
+
+.key.space {
+    flex: 1;
+    font-size: 16px;
+}
+
+.key.return {
+    background: var(--color-main, #269088);
+    color: white;
+    min-width: 84px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.key svg {
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 375px) {
+    .key {
+        min-width: 28px;
+        height: 38px;
+        font-size: 20px;
+    }
+    
+    .keyboard-row {
+        gap: 4px;
+    }
+    
+    .key.shift,
+    .key.delete {
+        min-width: 38px;
+    }
+}
+
+@media (min-width: 414px) {
+    .key {
+        min-width: 36px;
+        height: 44px;
+        font-size: 24px;
+    }
+    
+    .keyboard-row {
+        gap: 7px;
+    }
 }
