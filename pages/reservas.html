@@ -1,111 +1,147 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FITMAP - Home</title>
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="../css/home.css">
-</head>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/home.css" />
+    <link rel="preload" as="image" href="../source/svgs/Home_On.svg" />
+    <link rel="preload" as="image" href="../source/svgs/Home_Off.svg" />
+    <link rel="preload" as="image" href="../source/svgs/Reservation_On.svg" />
+    <link rel="preload" as="image" href="../source/svgs/Reservation_Off.svg" />
+    <link rel="preload" as="image" href="../source/svgs/Search_On.svg" />
+    <link rel="preload" as="image" href="../source/svgs/Search_Of.svg" />
+    <link rel="preload" as="image" href="../source/svgs/Movie_On.svg" />
+    <link rel="preload" as="image" href="../source/svgs/Movie_Off.svg" />
+    <link rel="preload" as="image" href="../source/svgs/Account_On.svg" />
+    <link rel="preload" as="image" href="../source/svgs/Account_Off.svg" />
+  </head>
 
-<body>
+  <body>
     <div class="screen">
-        <!-- Contenido de la pantalla -->
-        <div class="content">
-            <!-- Header -->
-            <header class="header">
-                <div class="logo-container">
-                    <img src="../source/Branding/LogoHome.svg" alt="FITMAP" class="logo">
+      <!-- Contenido de la pantalla -->
+      <div class="content">
+        <!-- Header -->
+        <header class="header">
+          <div class="logo-container">
+            <img
+              src="../source/Branding/LogoHome.svg"
+              alt="FITMAP"
+              class="logo"
+            />
+          </div>
+          <h1 class="page-title">Reservas</h1>
+          <button class="settings-btn">
+            <img src="../source/svgs/Settings.svg" alt="Ajustes" />
+          </button>
+        </header>
+
+        <!-- Pendientes -->
+        <section class="recommendations">
+          <h2 class="section-title">Pendientes</h2>
+          <div class="recommendation-card">
+            <a href="Instalaciones/Baseball.html" class="card-image-link">
+              <div class="card-image municipal">
+                <div class="card-label">
+                  <img
+                    src="../source/svgs/Baseball.svg"
+                    alt="Béisbol"
+                    width="16"
+                    height="16"
+                  />
+                  <span>Campo Municipal de Béisbol</span>
                 </div>
-                <h1 class="page-title">Reservas</h1>
-                <button class="settings-btn">
-                    <img src="../source/svgs/Settings.svg" alt="Ajustes">
-                </button>
-            </header>
+              </div>
+            </a>
+            <div class="card-location">
+              <img
+                src="../source/Branding/LogoLocation.svg"
+                alt="Ubicación"
+                width="14"
+                height="14"
+              />
+              <span>Valencia</span>
+            </div>
+          </div>
+        </section>
 
-            <!-- Pendientes -->
-            <section class="recommendations">
-                <h2 class="section-title">Pendientes</h2>
-                <div class="recommendation-card">
-                    <a href="Instalaciones/Baseball.html" class="card-image-link">
-                        <div class="card-image municipal">
-                            <div class="card-label">
-                                <img src="../source/svgs/Baseball.svg" alt="Béisbol" width="16" height="16">
-                                <span>Campo Municipal de Béisbol</span>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="card-location">
-                        <img src="../source/Branding/LogoLocation.svg" alt="Ubicación" width="14" height="14">
-                        <span>Valencia</span>
-                    </div>
+        <!-- Completadas -->
+        <section class="completed-section">
+          <h2 class="section-title">Completadas</h2>
+
+          <div class="recommendation-card">
+            <a href="Instalaciones/Football.html" class="card-image-link">
+              <div class="card-image stadium">
+                <div class="card-label">
+                  <img
+                    src="../source/svgs/Football.svg"
+                    alt="Fútbol"
+                    width="16"
+                    height="16"
+                  />
+                  <span>Estadio de Mestalla</span>
                 </div>
-            </section>
+              </div>
+            </a>
+            <div class="card-location">
+              <img
+                src="../source/Branding/LogoLocation.svg"
+                alt="Ubicación"
+                width="14"
+                height="14"
+              />
+              <span>Avenida de Suecia, Valencia</span>
+            </div>
+          </div>
 
-            <!-- Completadas -->
-            <section class="completed-section">
-                <h2 class="section-title">Completadas</h2>
-
-                <div class="recommendation-card">
-                    <a href="Instalaciones/Football.html" class="card-image-link">
-                        <div class="card-image stadium">
-                            <div class="card-label">
-                                <img src="../source/svgs/Football.svg" alt="Fútbol" width="16" height="16">
-                                <span>Estadio de Mestalla</span>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="card-location">
-                        <img src="../source/Branding/LogoLocation.svg" alt="Ubicación" width="14" height="14">
-                        <span>Avenida de Suecia, Valencia</span>
-                    </div>
+          <div class="recommendation-card">
+            <a href="Instalaciones/Basketball.html" class="card-image-link">
+              <div class="card-image fountain">
+                <div class="card-label">
+                  <img
+                    src="../source/svgs/Basketball.svg"
+                    alt="Baloncesto"
+                    width="16"
+                    height="16"
+                  />
+                  <span>La Fonteta</span>
                 </div>
-
-                <div class="recommendation-card">
-                    <a href="Instalaciones/Basketball.html" class="card-image-link">
-                        <div class="card-image fountain">
-                            <div class="card-label">
-                                <img src="../source/svgs/Basketball.svg" alt="Baloncesto" width="16" height="16">
-                                <span>La Fonteta</span>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="card-location">
-                        <img src="../source/Branding/LogoLocation.svg" alt="Ubicación" width="14" height="14">
-                        <span>Av. Hms Maristas, Valencia</span>
-                    </div>
-                </div>
-                
-            </section>
-        </div>
-
-        <!-- Bottom Nav -->
-        <nav class="bottom-nav">
-            <a class="nav-btn active" href="home.html" aria-label="Inicio">
-                <img src="../source/svgs/Home_Off.svg" alt="Inicio">
+              </div>
             </a>
+            <div class="card-location">
+              <img
+                src="../source/Branding/LogoLocation.svg"
+                alt="Ubicación"
+                width="14"
+                height="14"
+              />
+              <span>Av. Hms Maristas, Valencia</span>
+            </div>
+          </div>
+        </section>
+      </div>
 
-            <a class="nav-btn" href="reservas.html" aria-label="Reservas">
-                <img src="../source/svgs/Reservation_On.svg" alt="Reservas">
-            </a>
-
-            <a class="nav-btn" href="buscar.html" aria-label="Buscar">
-                <img src="../source/svgs/Search_Off.svg" alt="Buscar">
-            </a>
-
-            <a class="nav-btn" href="reels.html" aria-label="Cine">
-                <img src="../source/svgs/Movie_Off.svg" alt="Cine">
-            </a>
-
-            <a class="nav-btn" href="profile.html" aria-label="Cuenta">
-                <img src="../source/svgs/Account_Off.svg" alt="Cuenta">
-            </a>
-        </nav>
-
-
+      <!-- Bottom Nav -->
+      <nav class="bottom-nav">
+        <button class="nav-btn">
+          <img src="../source/svgs/Home_Off.svg" alt="Inicio" />
+        </button>
+        <button class="nav-btn active">
+          <img src="../source/svgs/Reservation_On.svg" alt="Reservas" />
+        </button>
+        <button class="nav-btn">
+          <img src="../source/svgs/Search_Off.svg" alt="Buscar" />
+        </button>
+        <button class="nav-btn">
+          <img src="../source/svgs/Movie_Off.svg" alt="Reels" />
+        </button>
+        <button class="nav-btn">
+          <img src="../source/svgs/Account_Off.svg" alt="Perfil" />
+        </button>
+      </nav>
     </div>
-</body>
-
+    <script src="../js/main.js"></script>
+  </body>
 </html>

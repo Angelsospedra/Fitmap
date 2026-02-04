@@ -1,192 +1,278 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>FITMAP - Buscar Instalaciones</title>
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="../css/search.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0" />
-</head>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/search.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+    />
+    <link rel="preload" as="image" href="../source/svgs/Home_On.svg" />
+    <link rel="preload" as="image" href="../source/svgs/Home_Off.svg" />
+    <link rel="preload" as="image" href="../source/svgs/Reservation_On.svg" />
+    <link rel="preload" as="image" href="../source/svgs/Reservation_Off.svg" />
+    <link rel="preload" as="image" href="../source/svgs/Search_On.svg" />
+    <link rel="preload" as="image" href="../source/svgs/Search_Of.svg" />
+    <link rel="preload" as="image" href="../source/svgs/Movie_On.svg" />
+    <link rel="preload" as="image" href="../source/svgs/Movie_Off.svg" />
+    <link rel="preload" as="image" href="../source/svgs/Account_On.svg" />
+    <link rel="preload" as="image" href="../source/svgs/Account_Off.svg" />
 
-<body>
+    
+  </head>
+
+  <body>
     <div class="screen">
-        <!-- Contenido de la pantalla -->
-        <div class="content">
-            <!-- Header -->
-            <header class="search-header">
-                <div class="logo-container">
-                    <img src="../source/Branding/full_iso.svg" alt="FITMAP" class="logo">
-                </div>
-                
-                <!-- Buscador -->
-                <div class="search-container">
-                    <div class="search-box">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            <path d="M19 19L14.65 14.65" stroke="#9CA3AF" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                        </svg>
-                        <input type="text" placeholder="Buscar..." class="search-input" id="searchInput" readonly>
-                    </div>
-                </div>
-            </header>
+      <!-- Contenido de la pantalla -->
+      <div class="content">
+        <!-- Header -->
+        <header class="search-header">
+          <div class="logo-container">
+            <img
+              src="../source/Branding/full_iso.svg"
+              alt="FITMAP"
+              class="logo"
+            />
+          </div>
 
-            <!-- Filtros -->
-            <div class="filters-container">
-                <button class="filter-chip active" data-sport="all">Todos</button>
-                <button class="filter-chip" data-sport="football">
-                    <span class="material-symbols-outlined">sports_soccer</span>
-                </button>
-                <button class="filter-chip" data-sport="basketball">
-                    <span class="material-symbols-outlined">sports_basketball</span>
-                </button>
-                <button class="filter-chip" data-sport="tennis">
-                    <span class="material-symbols-outlined">sports_tennis</span>
-                </button>
-                <button class="filter-chip" data-sport="baseball">
-                    <span class="material-symbols-outlined">sports_baseball</span>
-                </button>
-                <button class="filter-chip" data-sport="gym">
-                    <span class="material-symbols-outlined">fitness_center</span>
-                </button>
+          <!-- Buscador -->
+          <div class="search-container">
+            <div class="search-box">
+              <svg
+                width="20"
+                height="20"
+                viewBox="0 0 20 20"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z"
+                  stroke="#9CA3AF"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+                <path
+                  d="M19 19L14.65 14.65"
+                  stroke="#9CA3AF"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                />
+              </svg>
+              <input
+                type="text"
+                placeholder="Buscar..."
+                class="search-input"
+                id="searchInput"
+                readonly
+              />
             </div>
+          </div>
+        </header>
 
-            <!-- Instalaciones -->
-            <section class="installations-section">
-                <div class="installation-card">
-                    <a href="Instalaciones/Tennis.html" class="installation-link">
-                        <div class="installation-image" style="background-image: url('../source/imgs/Tennis.png');">
-                            <div class="installation-label">
-                                <img src="../source/svgs/Tennis.svg" alt="Tenis" width="16" height="16">
-                                <span>Club de Tenis Valencia</span>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="installation-location">
-                        <img src="../source/Branding/LogoLocation.svg" alt="Ubicación" width="14" height="14">
-                        <span>Avenida Baleares, Valencia</span>
-                    </div>
-                </div>
-
-                <div class="installation-card">
-                    <a href="Instalaciones/Basketball.html" class="installation-link">
-                        <div class="installation-image" style="background-image: url('../source/imgs/Fonteta.png');">
-                            <div class="installation-label">
-                                <img src="../source/svgs/Basketball.svg" alt="Baloncesto" width="16" height="16">
-                                <span>La Fonteta</span>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="installation-location">
-                        <img src="../source/Branding/LogoLocation.svg" alt="Ubicación" width="14" height="14">
-                        <span>Av. Hms Maristas, Valencia</span>
-                    </div>
-                </div>
-
-                <div class="installation-card">
-                    <a href="Instalaciones/Baseball.html" class="installation-link">
-                        <div class="installation-image" style="background-image: url('../source/imgs/Baseball.png');">
-                            <div class="installation-label">
-                                <img src="../source/svgs/Baseball.svg" alt="Béisbol" width="16" height="16">
-                                <span>Campo Municipal de Béisbol</span>
-                            </div>
-                        </div>
-                    </a>
-                    <div class="installation-location">
-                        <img src="../source/Branding/LogoLocation.svg" alt="Ubicación" width="14" height="14">
-                        <span>Valencia</span>
-                    </div>
-                </div>
-            </section>
+        <!-- Filtros -->
+        <div class="filters-container">
+          <button class="filter-chip active" data-sport="all">Todos</button>
+          <button class="filter-chip" data-sport="football">
+            <span class="material-symbols-outlined">sports_soccer</span>
+          </button>
+          <button class="filter-chip" data-sport="basketball">
+            <span class="material-symbols-outlined">sports_basketball</span>
+          </button>
+          <button class="filter-chip" data-sport="tennis">
+            <span class="material-symbols-outlined">sports_tennis</span>
+          </button>
+          <button class="filter-chip" data-sport="baseball">
+            <span class="material-symbols-outlined">sports_baseball</span>
+          </button>
+          <button class="filter-chip" data-sport="gym">
+            <span class="material-symbols-outlined">fitness_center</span>
+          </button>
         </div>
 
-        <!-- Bottom Nav -->
-        <nav class="bottom-nav">
-            <a class="nav-btn" href="home.html" aria-label="Inicio">
-                <img src="../source/svgs/Home_Off.svg" alt="Inicio">
+        <!-- Instalaciones -->
+        <section class="installations-section">
+          <div class="installation-card">
+            <a href="Instalaciones/Tennis.html" class="installation-link">
+              <div
+                class="installation-image"
+                style="
+                  background-image: url(&quot;../source/imgs/Tennis.png&quot;);
+                "
+              >
+                <div class="installation-label">
+                  <img
+                    src="../source/svgs/Tennis.svg"
+                    alt="Tenis"
+                    width="16"
+                    height="16"
+                  />
+                  <span>Club de Tenis Valencia</span>
+                </div>
+              </div>
             </a>
-
-            <a class="nav-btn" href="reservas.html" aria-label="Reservas">
-                <img src="../source/svgs/Reservation_Off.svg" alt="Reservas">
-            </a>
-
-            <a class="nav-btn active" href="buscar.html" aria-label="Buscar">
-                <img src="../source/svgs/Search_On.svg" alt="Buscar">
-            </a>
-
-            <a class="nav-btn" href="reels.html" aria-label="Cine">
-                <img src="../source/svgs/Movie_Off.svg" alt="Cine">
-            </a>
-
-            <a class="nav-btn" href="profile.html" aria-label="Cuenta">
-                <img src="../source/svgs/Account_Off.svg" alt="Cuenta">
-            </a>
-        </nav>
-
-        <!-- Teclado iOS -->
-        <div class="ios-keyboard" id="iosKeyboard">
-            <div class="keyboard-toolbar">
-                <button class="toolbar-btn" id="cancelBtn">Cancelar</button>
-                <button class="toolbar-btn done" id="doneBtn">Listo</button>
+            <div class="installation-location">
+              <img
+                src="../source/Branding/LogoLocation.svg"
+                alt="Ubicación"
+                width="14"
+                height="14"
+              />
+              <span>Avenida Baleares, Valencia</span>
             </div>
-            <div class="keyboard-rows">
-                <div class="keyboard-row">
-                    <button class="key" data-key="q">q</button>
-                    <button class="key" data-key="w">w</button>
-                    <button class="key" data-key="e">e</button>
-                    <button class="key" data-key="r">r</button>
-                    <button class="key" data-key="t">t</button>
-                    <button class="key" data-key="y">y</button>
-                    <button class="key" data-key="u">u</button>
-                    <button class="key" data-key="i">i</button>
-                    <button class="key" data-key="o">o</button>
-                    <button class="key" data-key="p">p</button>
+          </div>
+
+          <div class="installation-card">
+            <a href="Instalaciones/Basketball.html" class="installation-link">
+              <div
+                class="installation-image"
+                style="
+                  background-image: url(&quot;../source/imgs/Fonteta.png&quot;);
+                "
+              >
+                <div class="installation-label">
+                  <img
+                    src="../source/svgs/Basketball.svg"
+                    alt="Baloncesto"
+                    width="16"
+                    height="16"
+                  />
+                  <span>La Fonteta</span>
                 </div>
-                <div class="keyboard-row">
-                    <button class="key" data-key="a">a</button>
-                    <button class="key" data-key="s">s</button>
-                    <button class="key" data-key="d">d</button>
-                    <button class="key" data-key="f">f</button>
-                    <button class="key" data-key="g">g</button>
-                    <button class="key" data-key="h">h</button>
-                    <button class="key" data-key="j">j</button>
-                    <button class="key" data-key="k">k</button>
-                    <button class="key" data-key="l">l</button>
-                </div>
-                <div class="keyboard-row">
-                    <button class="key shift" id="shiftKey">
-                        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
-                            <path d="M10 4L4 10H7V16H13V10H16L10 4Z" fill="currentColor"/>
-                        </svg>
-                    </button>
-                    <button class="key" data-key="z">z</button>
-                    <button class="key" data-key="x">x</button>
-                    <button class="key" data-key="c">c</button>
-                    <button class="key" data-key="v">v</button>
-                    <button class="key" data-key="b">b</button>
-                    <button class="key" data-key="n">n</button>
-                    <button class="key" data-key="m">m</button>
-                    <button class="key delete" id="deleteKey">
-                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-                            <path d="M22 3H7C6.31 3 5.77 3.35 5.41 3.88L0 12L5.41 20.11C5.77 20.64 6.31 21 7 21H22C23.1 21 24 20.1 24 19V5C24 3.9 23.1 3 22 3ZM19 15.59L17.59 17L14 13.41L10.41 17L9 15.59L12.59 12L9 8.41L10.41 7L14 10.59L17.59 7L19 8.41L15.41 12L19 15.59Z" fill="currentColor"/>
-                        </svg>
-                    </button>
-                </div>
-                <div class="keyboard-row bottom-row">
-                    <button class="key numbers" id="numbersKey">123</button>
-                    <button class="key space" data-key=" ">espacio</button>
-                    <button class="key return" id="returnKey">buscar</button>
-                </div>
+              </div>
+            </a>
+            <div class="installation-location">
+              <img
+                src="../source/Branding/LogoLocation.svg"
+                alt="Ubicación"
+                width="14"
+                height="14"
+              />
+              <span>Av. Hms Maristas, Valencia</span>
             </div>
+          </div>
+
+          <div class="installation-card">
+            <a href="Instalaciones/Baseball.html" class="installation-link">
+              <div
+                class="installation-image"
+                style="
+                  background-image: url(&quot;../source/imgs/Baseball.png&quot;);
+                "
+              >
+                <div class="installation-label">
+                  <img
+                    src="../source/svgs/Baseball.svg"
+                    alt="Béisbol"
+                    width="16"
+                    height="16"
+                  />
+                  <span>Campo Municipal de Béisbol</span>
+                </div>
+              </div>
+            </a>
+            <div class="installation-location">
+              <img
+                src="../source/Branding/LogoLocation.svg"
+                alt="Ubicación"
+                width="14"
+                height="14"
+              />
+              <span>Valencia</span>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Bottom Nav -->
+      <nav class="bottom-nav">
+        <button class="nav-btn">
+          <img src="../source/svgs/Home_Off.svg" alt="Inicio" />
+        </button>
+        <button class="nav-btn">
+          <img src="../source/svgs/Reservation_Off.svg" alt="Reservas" />
+        </button>
+        <button class="nav-btn active">
+          <img src="../source/svgs/Search_On.svg" alt="Buscar" />
+        </button>
+        <button class="nav-btn">
+          <img src="../source/svgs/Movie_Off.svg" alt="Reels" />
+        </button>
+        <button class="nav-btn">
+          <img src="../source/svgs/Account_Off.svg" alt="Perfil" />
+        </button>
+      </nav>
+
+      <!-- Teclado iOS -->
+      <div class="ios-keyboard" id="iosKeyboard">
+        <div class="keyboard-toolbar">
+          <button class="toolbar-btn" id="cancelBtn">Cancelar</button>
+          <button class="toolbar-btn done" id="doneBtn">Listo</button>
         </div>
+        <div class="keyboard-rows">
+          <div class="keyboard-row">
+            <button class="key" data-key="q">q</button>
+            <button class="key" data-key="w">w</button>
+            <button class="key" data-key="e">e</button>
+            <button class="key" data-key="r">r</button>
+            <button class="key" data-key="t">t</button>
+            <button class="key" data-key="y">y</button>
+            <button class="key" data-key="u">u</button>
+            <button class="key" data-key="i">i</button>
+            <button class="key" data-key="o">o</button>
+            <button class="key" data-key="p">p</button>
+          </div>
+          <div class="keyboard-row">
+            <button class="key" data-key="a">a</button>
+            <button class="key" data-key="s">s</button>
+            <button class="key" data-key="d">d</button>
+            <button class="key" data-key="f">f</button>
+            <button class="key" data-key="g">g</button>
+            <button class="key" data-key="h">h</button>
+            <button class="key" data-key="j">j</button>
+            <button class="key" data-key="k">k</button>
+            <button class="key" data-key="l">l</button>
+          </div>
+          <div class="keyboard-row">
+            <button class="key shift" id="shiftKey">
+              <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M10 4L4 10H7V16H13V10H16L10 4Z" fill="currentColor" />
+              </svg>
+            </button>
+            <button class="key" data-key="z">z</button>
+            <button class="key" data-key="x">x</button>
+            <button class="key" data-key="c">c</button>
+            <button class="key" data-key="v">v</button>
+            <button class="key" data-key="b">b</button>
+            <button class="key" data-key="n">n</button>
+            <button class="key" data-key="m">m</button>
+            <button class="key delete" id="deleteKey">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M22 3H7C6.31 3 5.77 3.35 5.41 3.88L0 12L5.41 20.11C5.77 20.64 6.31 21 7 21H22C23.1 21 24 20.1 24 19V5C24 3.9 23.1 3 22 3ZM19 15.59L17.59 17L14 13.41L10.41 17L9 15.59L12.59 12L9 8.41L10.41 7L14 10.59L17.59 7L19 8.41L15.41 12L19 15.59Z"
+                  fill="currentColor"
+                />
+              </svg>
+            </button>
+          </div>
+          <div class="keyboard-row bottom-row">
+            <button class="key numbers" id="numbersKey">123</button>
+            <button class="key space" data-key=" ">espacio</button>
+            <button class="key return" id="returnKey">buscar</button>
+          </div>
+        </div>
+      </div>
 
-        <!-- Overlay -->
-        <div class="keyboard-overlay" id="keyboardOverlay"></div>
+      <!-- Overlay -->
+      <div class="keyboard-overlay" id="keyboardOverlay"></div>
     </div>
 
     <script src="../js/buscar.js"></script>
-</body>
-
+    <script src="../js/main.js"></script>
+  </body>
 </html>
