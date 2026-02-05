@@ -2,7 +2,6 @@
  * Settings Toggle Switch Manager
  * Gestiona el estado de los toggles y guarda en localStorage
  */
-
 class SettingsManager {
   constructor() {
     this.storageKey = 'fitmap_settings';
@@ -10,6 +9,7 @@ class SettingsManager {
     this.initializeToggles();
     this.setupEventListeners();
     this.loadSettings();
+    this.initializeEditables();
   }
 
   /**
@@ -39,7 +39,7 @@ class SettingsManager {
     const btn = this.toggles[toggleName];
     btn.classList.toggle('active');
     this.saveSettings();
-    
+
     // Log para debug
     console.log(`Toggle "${toggleName}" cambiado a:`, btn.classList.contains('active'));
   }
@@ -60,7 +60,7 @@ class SettingsManager {
    */
   loadSettings() {
     const savedSettings = localStorage.getItem(this.storageKey);
-    
+
     if (savedSettings) {
       try {
         const settings = JSON.parse(savedSettings);
@@ -92,6 +92,149 @@ class SettingsManager {
     });
     localStorage.removeItem(this.storageKey);
     console.log('Configuración reiniciada');
+  }
+
+  /**
+   * Inicializa los campos editables (ubicación e idioma)
+   */
+  initializeEditables() {
+    this.setupLocationEditable();
+    this.setupLanguageEditable();
+    this.loadEditables();
+  }
+
+  /**
+   * Configura la funcionalidad de edición de ubicación
+   */
+  setupLocationEditable() {
+    const locationBtn = document.getElementById('location-btn');
+    const locationModal = document.getElementById('location-modal');
+    const locationInput = document.getElementById('location-input');
+    const locationCancel = document.getElementById('location-cancel');
+    const locationConfirm = document.getElementById('location-confirm');
+    const locationDisplay = document.getElementById('location-display');
+
+    if (!locationBtn || !locationModal) return;
+
+    // Abrir modal
+    locationBtn.addEventListener('click', () => {
+      if (locationDisplay) {
+        locationInput.value = locationDisplay.textContent;
+      }
+      locationModal.classList.remove('hidden');
+    });
+
+    // Cancelar
+    locationCancel.addEventListener('click', () => {
+      locationModal.classList.add('hidden');
+    });
+
+    // Confirmar
+    locationConfirm.addEventListener('click', () => {
+      this.saveLocation(locationInput, locationDisplay, locationModal);
+    });
+
+    // Permitir guardar con Enter
+    locationInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') {
+        this.saveLocation(locationInput, locationDisplay, locationModal);
+      }
+    });
+
+    // Cerrar modal al hacer click fuera
+    locationModal.addEventListener('click', (e) => {
+      if (e.target === locationModal) {
+        locationModal.classList.add('hidden');
+      }
+    });
+  }
+
+  /**
+   * Guarda la ubicación en localStorage
+   */
+  saveLocation(input, display, modal) {
+    const newLocation = input.value.trim();
+
+    if (newLocation) {
+      display.textContent = newLocation;
+      localStorage.setItem('user_location', newLocation);
+      modal.classList.add('hidden');
+      console.log('Ubicación actualizada:', newLocation);
+    } else {
+      alert('Por favor, ingresa una ubicación válida');
+    }
+  }
+
+  /**
+   * Configura la funcionalidad de edición de idioma
+   */
+  setupLanguageEditable() {
+    const languageBtn = document.getElementById('language-btn');
+    const languageModal = document.getElementById('language-modal');
+    const languageSelect = document.getElementById('language-select');
+    const languageCancel = document.getElementById('language-cancel');
+    const languageConfirm = document.getElementById('language-confirm');
+    const languageDisplay = document.getElementById('language-display');
+
+    if (!languageBtn || !languageModal) return;
+
+    // Abrir modal
+    languageBtn.addEventListener('click', () => {
+      if (languageDisplay) {
+        languageSelect.value = languageDisplay.textContent;
+      }
+      languageModal.classList.remove('hidden');
+    });
+
+    // Cancelar
+    languageCancel.addEventListener('click', () => {
+      languageModal.classList.add('hidden');
+    });
+
+    // Confirmar
+    languageConfirm.addEventListener('click', () => {
+      this.saveLanguage(languageSelect, languageDisplay, languageModal);
+    });
+
+    // Cerrar modal al hacer click fuera
+    languageModal.addEventListener('click', (e) => {
+      if (e.target === languageModal) {
+        languageModal.classList.add('hidden');
+      }
+    });
+  }
+
+  /**
+   * Guarda el idioma en localStorage
+   */
+  saveLanguage(select, display, modal) {
+    const newLanguage = select.value;
+
+    if (newLanguage) {
+      display.textContent = newLanguage;
+      localStorage.setItem('user_language', newLanguage);
+      modal.classList.add('hidden');
+      console.log('Idioma actualizado:', newLanguage);
+    }
+  }
+
+  /**
+   * Carga los valores de ubicación e idioma desde localStorage
+   */
+  loadEditables() {
+    const savedLocation = localStorage.getItem('user_location');
+    const savedLanguage = localStorage.getItem('user_language');
+
+    const locationDisplay = document.getElementById('location-display');
+    const languageDisplay = document.getElementById('language-display');
+
+    if (savedLocation && locationDisplay) {
+      locationDisplay.textContent = savedLocation;
+    }
+
+    if (savedLanguage && languageDisplay) {
+      languageDisplay.textContent = savedLanguage;
+    }
   }
 }
 
