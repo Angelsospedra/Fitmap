@@ -32,69 +32,52 @@
           <img src="../source/svgs/arrowback.svg" alt="Volver" />
         </button>
 
-        <!-- Contenedor principal de datos personales -->
-        <div class="personal-info-container">
-          <!-- Formulario de información personal -->
-          <form class="personal-info-form">
-            <!-- Nombre -->
-            <div class="form-group">
-              <label for="firstname">Nombre</label>
-              <input
-                type="text"
-                id="firstname"
-                name="firstname"
-                placeholder="Juan"
-                value="Juan"
-              />
-            </div>
-
-            <!-- Apellidos -->
-            <div class="form-group">
-              <label for="lastname">Apellidos</label>
-              <input
-                type="text"
-                id="lastname"
-                name="lastname"
-                placeholder="Garcia Sanchez"
-                value="Garcia Sanchez"
-              />
-            </div>
-
-            <!-- Email -->
-            <div class="form-group">
-              <label for="email">Correo</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="juan@mail.com"
-                value="juan@mail.com"
-              />
-            </div>
-
-            <!-- Teléfono con código país -->
-            <div class="form-group">
-              <label for="phone">Teléfono</label>
-              <div class="phone-input-group">
-                <input
-                  type="text"
-                  id="country-code"
-                  class="country-code"
-                  placeholder="+34"
-                  value="+34"
-                  readonly
-                />
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  class="phone-number"
-                  placeholder="604204512"
-                  value="604204512"
-                />
+        <!-- Contenedor principal de ajustes -->
+        <div class="settings-container">
+          <!-- Grupo de preferencias -->
+          <div class="settings-group">
+            <h2 class="settings-group-title">Preferencias</h2>
+            
+            <!-- Notificaciones -->
+            <div class="settings-item">
+              <div class="settings-label">
+                <span class="settings-text">Notificaciones</span>
               </div>
+              <button class="toggle-btn" data-toggle="notifications">
+                <div class="toggle-circle"></div>
+              </button>
             </div>
-          </form>
+
+            <!-- Ubicación -->
+            <div class="settings-item">
+              <div class="settings-label">
+                <span class="settings-text">Compartir ubicación</span>
+              </div>
+              <button class="toggle-btn" data-toggle="location">
+                <div class="toggle-circle"></div>
+              </button>
+            </div>
+
+            <!-- Modo oscuro -->
+            <div class="settings-item">
+              <div class="settings-label">
+                <span class="settings-text">Modo oscuro</span>
+              </div>
+              <button class="toggle-btn" data-toggle="darkmode">
+                <div class="toggle-circle"></div>
+              </button>
+            </div>
+
+            <!-- Marketing -->
+            <div class="settings-item">
+              <div class="settings-label">
+                <span class="settings-text">Permitir marketing</span>
+              </div>
+              <button class="toggle-btn" data-toggle="marketing">
+                <div class="toggle-circle"></div>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
 
@@ -117,6 +100,7 @@
         </button>
       </nav>
     </div>
+    <script src="../js/settings.js"></script>
     <script src="../js/main.js"></script>
   </body>
 </html>
