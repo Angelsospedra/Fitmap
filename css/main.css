@@ -49,17 +49,23 @@ body {
     min-height: 100vh;
     background: #ddd;
     font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
 .screen {
     width: 393px;
-    height: 852px;
+    min-height: 852px;
     background: var(--bg);
     overflow-y: auto;
     display: flex;
     flex-direction: column;
-    justify-content: flex-end;
-    /* empuja el nav al fondo */
+    position: relative;
+}
+
+.content {
+    flex: 1;
+    padding-bottom: 95px; /* espacio para el nav */
 }
 
 /* Importa la fuente Poppins de Google Fonts */
