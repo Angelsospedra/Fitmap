@@ -4,13 +4,7 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Screen layout */
-.screen {
-    display: flex;
-    flex-direction: column;
-    height: 100vh;
-    overflow: hidden;
-}
+/* Screen layout - no sobrescribir, main.css ya lo define correctamente */
 
 /* Header fijo */
 .search-header {
@@ -156,13 +150,13 @@ body {
     overflow-y: auto;
     width: 100%;
     background-color: var(--bg);
-    margin-top: 188px; /* Altura del header + filtros */
-    transition: margin-bottom 0.3s ease;
-    padding-bottom: 80px; /* Espacio para el navbar */
+    padding-top: 188px; /* Altura del header + filtros */
+    padding-bottom: 95px; /* Espacio para el navbar (75px height + 20px extra) */
+    transition: padding-bottom 0.3s ease;
 }
 
 .content.keyboard-active {
-    margin-bottom: 330px;
+    padding-bottom: 330px;
 }
 
 /* Instalaciones */
@@ -177,6 +171,19 @@ body {
     overflow: hidden;
     margin-bottom: 16px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: opacity 0.3s ease, transform 0.3s ease, max-height 0.3s ease, margin 0.3s ease;
+    opacity: 1;
+    transform: scale(1);
+    max-height: 500px;
+}
+
+.installation-card.hidden {
+    opacity: 0;
+    transform: scale(0.95);
+    max-height: 0;
+    margin: 0;
+    overflow: hidden;
+    pointer-events: none;
 }
 
 .installation-link {
