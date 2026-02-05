@@ -1,0 +1,255 @@
+/* =========================
+   GOOGLE FONTS - POPPINS
+========================= */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* =========================
+   PALETA DE COLORES
+========================= */
+:root {
+    --color-main-1: #269088;
+    --color-main-2: #141414;
+    --color-main-3: #E0E0E0;
+    --color-main-4: #5BCDC4;
+
+    --gray-1: #FBFBFB;
+    --gray-2: #B1B1B1;
+    --gray-3: #7A7A7A;
+    --gray-4: #464646;
+    --gray-5: #262626;
+
+    --bg: #FFFFFF;
+    --width: 393px;
+    --height: 852px;
+}
+
+/* =========================
+   1. RESET / BASE
+========================= */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* =========================
+   2. LAYOUT PANTALLA
+========================= */
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    min-height: 100vh;
+    background: #ddd;
+    font-family: 'Poppins', sans-serif;
+}
+
+.screen {
+    width: var(--width);
+    height: var(--height);
+    background: #FFFFFF;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* =========================
+   3. CONTENIDO
+========================= */
+.content {
+    flex: 1;
+    padding: 20px 33px 32px 33px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+    background: #FFFFFF;
+}
+
+/* =========================
+   4. HEADER SECTION
+========================= */
+.header-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 60px;
+    position: relative;
+    height: 245px;
+}
+
+.back-button {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: opacity 0.2s;
+    position: absolute;
+    left: 0;
+    top: 17px;
+    z-index: 10;
+}
+
+
+.back-button:active {
+    opacity: 0.5;
+}
+
+.arrow-icon {
+    width: 20px;
+    height: 20px;
+    display: block;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.logo-vertical {
+    width: 245px;
+    padding-top: 73px;
+    height: 285px;
+    aspect-ratio: 1/1;
+}
+
+/* =========================
+   5. TÍTULO
+========================= */
+.title {
+    color: var(--main-main-black, #141414);
+    text-align: center;
+
+    /* Medium/22 Poppins Medium */
+    font-family: Poppins;
+    font-size: 22px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+    padding-bottom: 20px;
+}
+
+/* =========================
+   6. FORMULARIO
+========================= */
+.login-form {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 100%;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-label {
+    color: var(--main-main-black, #141414);
+
+/* Regular/20 Poppins Regular */
+font-family: Poppins;
+font-size: 20px;
+font-style: normal;
+font-weight: 400;
+line-height: normal;
+}
+
+.form-input {
+    width: 100%;
+    height: 41px;
+    padding: 6px 19px 6px 20px;
+    border: 1px solid var(--color-main-2);
+    border-radius: 27px;
+    font-size: 20px;
+    font-family: 'Poppins', sans-serif;
+    font-weight: 400;
+    color: var(--color-main-2);
+    background: white;
+    transition: all 0.2s;
+}
+
+.form-input::placeholder {
+    color: var(--gray-2);
+    font-weight: 400;
+}
+
+.form-input:focus {
+    outline: none;
+    border-color: var(--color-main-1);
+    box-shadow: 0 0 0 2px rgba(38, 144, 136, 0.1);
+}
+
+/* Campo de teléfono */
+.phone-input-group {
+    display: flex;
+}
+
+.phone-prefix {
+    width: 72px;
+    flex-shrink: 0;
+    background: white;
+    color: var(--color-main-2);
+    font-weight: 400;
+    cursor: default;
+    text-align: center;
+    padding: 16px 10px;
+}
+
+.phone-number {
+    flex: 1;
+}
+
+/* =========================
+   7. BOTÓN CONFIRMAR
+========================= */
+.btn-confirm {
+    width: 150px;
+    height: 45px;
+    margin-top: 24px;
+    margin-left: auto;
+    margin-right: 0;
+    background: var(--color-main-1);
+    color: white;
+    border: none;
+    border-radius: 27px;
+    font-size: 20px;
+    font-weight: 400;
+    font-family: 'Poppins', sans-serif;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+
+.spacer {
+    display: flex;
+    height: 70px;
+    flex-direction: column;
+    justify-content: flex-end;
+    align-items: flex-end;
+    align-self: stretch;
+}
+
+
+
+/* =========================
+   9. SCROLLBAR
+========================= */
+.screen::-webkit-scrollbar {
+    width: 6px;
+}
+
+.screen::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.screen::-webkit-scrollbar-thumb {
+    background: var(--gray-3);
+    border-radius: 3px;
+}

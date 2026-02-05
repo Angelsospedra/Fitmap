@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=393, initial-scale=1.0">
+    <title>Fitmap - Iniciar Sesión</title>
+    <link rel="stylesheet" href="../css/inicio_sesion.css">
+</head>
+ 
+<body>
+    <div class="screen">
+        <!-- Contenido del formulario -->
+        <div class="content">
+            
+            <div class="header-section">
+                <button class="back-button" aria-label="Volver">
+                    <a href="landing.html">
+                        <img src="../source/svgs/ArrowBack.svg" alt="Volver" class="arrow-icon">
+                    </a>
+                </button>
+                <div class="logo-container">
+                    <img src="../source/Branding/full_logo.svg" alt="Fitmap" class="logo-vertical">
+                </div>
+            </div>
+
+            <h1 class="title">Iniciar sesión</h1>
+
+            <form class="login-form" id="loginForm">
+                <!-- Correo -->
+                <div class="form-group">
+                    <label for="correo" class="form-label">Correo</label>
+                    <input 
+                        type="email" 
+                        id="correo" 
+                        name="correo" 
+                        class="form-input" 
+                        placeholder="juan@mail.com"
+                        required
+                    >
+                </div>
+
+                <!-- Contraseña -->
+                <div class="form-group">
+                    <label for="contrasena" class="form-label">Contraseña</label>
+                    <input 
+                        type="password" 
+                        id="contrasena" 
+                        name="contrasena" 
+                        class="form-input" 
+                        placeholder="••••••••••••••••"
+                        required
+                    >
+                </div>
+
+                <!-- Botón confirmar -->
+                <div class="spacer">
+                    <button type="submit" class="btn-confirm">Confirmar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+
+</html>
