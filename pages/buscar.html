@@ -21,83 +21,81 @@
     <link rel="preload" as="image" href="../source/svgs/Movie_Off.svg" />
     <link rel="preload" as="image" href="../source/svgs/Account_On.svg" />
     <link rel="preload" as="image" href="../source/svgs/Account_Off.svg" />
-
-    
   </head>
 
   <body>
     <div class="screen">
-      <!-- Contenido de la pantalla -->
-      <div class="content">
-        <!-- Header -->
-        <header class="search-header">
-          <div class="logo-container">
-            <img
-              src="../source/Branding/full_iso.svg"
-              alt="FITMAP"
-              class="logo"
-            />
-          </div>
-
-          <!-- Buscador -->
-          <div class="search-container">
-            <div class="search-box">
-              <svg
-                width="20"
-                height="20"
-                viewBox="0 0 20 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z"
-                  stroke="#9CA3AF"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-                <path
-                  d="M19 19L14.65 14.65"
-                  stroke="#9CA3AF"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-              <input
-                type="text"
-                placeholder="Buscar..."
-                class="search-input"
-                id="searchInput"
-                readonly
-              />
-            </div>
-          </div>
-        </header>
-
-        <!-- Filtros -->
-        <div class="filters-container">
-          <button class="filter-chip active" data-sport="all">Todos</button>
-          <button class="filter-chip" data-sport="football">
-            <span class="material-symbols-outlined">sports_soccer</span>
-          </button>
-          <button class="filter-chip" data-sport="basketball">
-            <span class="material-symbols-outlined">sports_basketball</span>
-          </button>
-          <button class="filter-chip" data-sport="tennis">
-            <span class="material-symbols-outlined">sports_tennis</span>
-          </button>
-          <button class="filter-chip" data-sport="baseball">
-            <span class="material-symbols-outlined">sports_baseball</span>
-          </button>
-          <button class="filter-chip" data-sport="gym">
-            <span class="material-symbols-outlined">fitness_center</span>
-          </button>
+      <!-- Header Fijo -->
+      <header class="search-header">
+        <div class="logo-container">
+          <img
+            src="../source/Branding/full_iso.svg"
+            alt="FITMAP"
+            class="logo"
+          />
         </div>
 
+        <!-- Buscador -->
+        <div class="search-container">
+          <div class="search-box">
+            <svg
+              width="20"
+              height="20"
+              viewBox="0 0 20 20"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M9 17C13.4183 17 17 13.4183 17 9C17 4.58172 13.4183 1 9 1C4.58172 1 1 4.58172 1 9C1 13.4183 4.58172 17 9 17Z"
+                stroke="#9CA3AF"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+              <path
+                d="M19 19L14.65 14.65"
+                stroke="#9CA3AF"
+                stroke-width="2"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+              />
+            </svg>
+            <input
+              type="text"
+              placeholder="Buscar..."
+              class="search-input"
+              id="searchInput"
+              readonly
+            />
+          </div>
+        </div>
+      </header>
+
+      <!-- Filtros Fijos -->
+      <div class="filters-container">
+        <button class="filter-chip active" data-sport="all">Todos</button>
+        <button class="filter-chip" data-sport="football">
+          <span class="material-symbols-outlined">sports_soccer</span>
+        </button>
+        <button class="filter-chip" data-sport="basketball">
+          <span class="material-symbols-outlined">sports_basketball</span>
+        </button>
+        <button class="filter-chip" data-sport="tennis">
+          <span class="material-symbols-outlined">sports_tennis</span>
+        </button>
+        <button class="filter-chip" data-sport="baseball">
+          <span class="material-symbols-outlined">sports_baseball</span>
+        </button>
+        <button class="filter-chip" data-sport="gym">
+          <span class="material-symbols-outlined">fitness_center</span>
+        </button>
+      </div>
+
+      <!-- Contenido desplazable -->
+      <div class="content">
         <!-- Instalaciones -->
         <section class="installations-section">
-          <div class="installation-card">
+          <div class="installation-card" data-sport="tennis">
             <a href="Instalaciones/Tennis.html" class="installation-link">
               <div
                 class="installation-image"
@@ -106,12 +104,7 @@
                 "
               >
                 <div class="installation-label">
-                  <img
-                    src="../source/svgs/Tennis.svg"
-                    alt="Tenis"
-                    width="16"
-                    height="16"
-                  />
+                  <span class="material-symbols-outlined">sports_tennis</span>
                   <span>Club de Tenis Valencia</span>
                 </div>
               </div>
@@ -127,7 +120,7 @@
             </div>
           </div>
 
-          <div class="installation-card">
+          <div class="installation-card" data-sport="basketball">
             <a href="Instalaciones/Basketball.html" class="installation-link">
               <div
                 class="installation-image"
@@ -136,12 +129,7 @@
                 "
               >
                 <div class="installation-label">
-                  <img
-                    src="../source/svgs/Basketball.svg"
-                    alt="Baloncesto"
-                    width="16"
-                    height="16"
-                  />
+                  <span class="material-symbols-outlined">sports_basketball</span>
                   <span>La Fonteta</span>
                 </div>
               </div>
@@ -157,7 +145,7 @@
             </div>
           </div>
 
-          <div class="installation-card">
+          <div class="installation-card" data-sport="baseball">
             <a href="Instalaciones/Baseball.html" class="installation-link">
               <div
                 class="installation-image"
@@ -166,13 +154,58 @@
                 "
               >
                 <div class="installation-label">
-                  <img
-                    src="../source/svgs/Baseball.svg"
-                    alt="Béisbol"
-                    width="16"
-                    height="16"
-                  />
+                  <span class="material-symbols-outlined">sports_baseball</span>
                   <span>Campo Municipal de Béisbol</span>
+                </div>
+              </div>
+            </a>
+            <div class="installation-location">
+              <img
+                src="../source/Branding/LogoLocation.svg"
+                alt="Ubicación"
+                width="14"
+                height="14"
+              />
+              <span>Valencia</span>
+            </div>
+          </div>
+
+          <div class="installation-card" data-sport="football">
+            <a href="Instalaciones/Football.html" class="installation-link">
+              <div
+                class="installation-image"
+                style="
+                  background-image: url(&quot;../source/imgs/Mestalla.png&quot;);
+                "
+              >
+                <div class="installation-label">
+                  <span class="material-symbols-outlined">sports_soccer</span>
+                  <span>Campo de Mestalla</span>
+                </div>
+              </div>
+            </a>
+            <div class="installation-location">
+              <img
+                src="../source/Branding/LogoLocation.svg"
+                alt="Ubicación"
+                width="14"
+                height="14"
+              />
+              <span>Valencia</span>
+            </div>
+          </div>
+
+          <div class="installation-card" data-sport="gym">
+            <a href="Instalaciones/Gym.html" class="installation-link">
+              <div
+                class="installation-image"
+                style="
+                  background-image: url(&quot;../source/imgs/Gym.png&quot;);
+                "
+              >
+                <div class="installation-label">
+                  <span class="material-symbols-outlined">fitness_center</span>
+                  <span>Gimnasio Municipal</span>
                 </div>
               </div>
             </a>
@@ -189,15 +222,16 @@
         </section>
       </div>
 
+      
       <!-- Bottom Nav -->
       <nav class="bottom-nav">
-        <button class="nav-btn">
+        <button class="nav-btn active">
           <img src="../source/svgs/Home_Off.svg" alt="Inicio" />
         </button>
         <button class="nav-btn">
           <img src="../source/svgs/Reservation_Off.svg" alt="Reservas" />
         </button>
-        <button class="nav-btn active">
+        <button class="nav-btn">
           <img src="../source/svgs/Search_On.svg" alt="Buscar" />
         </button>
         <button class="nav-btn">
@@ -207,6 +241,7 @@
           <img src="../source/svgs/Account_Off.svg" alt="Perfil" />
         </button>
       </nav>
+   
 
       <!-- Teclado iOS -->
       <div class="ios-keyboard" id="iosKeyboard">
