@@ -1,64 +1,62 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=393, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=393, initial-scale=1.0" />
     <title>Fitmap - Perfil</title>
-    <link rel="stylesheet" href="../css/main.css">
-    <link rel="stylesheet" href="../css/navbar.css">
-    <link rel="stylesheet" href="../css/profile.css">
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon">
-
-</head>
-
-<body>
+    <link rel="stylesheet" href="../css/main.css" />
+    <link rel="stylesheet" href="../css/navbar.css" />
+    <link rel="stylesheet" href="../css/profile.css" />
+    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+  </head>
+  <body>
     <div class="screen">
-        <!-- Contenido de la pantalla -->
-        <div class="content">
-            <div class="profile-container">
-                <!-- Foto de perfil con opción editar -->
-                <div class="profile-photo-section">
-                    <div class="profile-photo">
-                        <img src="../source/imgs/profile_photo.svg" alt="Foto de perfil">
-                    </div>
-                    <button class="edit-btn">editar</button>
-                </div>
-
-                <!-- Botones de opciones -->
-                <div class="profile-options">
-                    <a class="option-btn" href="personal_info.html">Datos personales</a>
-                    <button class="option-btn">Preferencias deportivas</button>
-                    <button class="option-btn">Metodos de pago</button>
-                </div>
-
-                <!-- Opción cerrar sesión -->
-                <div class="logout-section">
-                    <button class="logout-btn">Cerrar sesión</button>
-                </div>
+      <!-- Contenido de la pantalla -->
+      <div class="content">
+        <div class="profile-container">
+          <!-- Foto de perfil con opción editar -->
+          <div class="profile-photo-section">
+            <div class="profile-photo">
+              <img
+                src="../source/imgs/profile_photo.svg"
+                alt="Foto de perfil"
+              />
             </div>
+            <button class="edit-btn">editar</button>
+          </div>
+          <!-- Botones de opciones -->
+          <div class="profile-options">
+            <a href="personal_info.html" class="option-btn">Datos personales</a>
+            <a href="preferences.html" class="option-btn"
+              >Preferencias deportivas</a
+            >
+            <a href="payments.html" class="option-btn">Metodos de pago</a>
+          </div>
+          <!-- Opción cerrar sesión -->
+          <div class="logout-section">
+            <a href="landing.html" class="logout-btn">Cerrar sesión</a>
+          </div>
         </div>
-
-        <!-- Bottom nav -->
-        <nav class="bottom-nav">
-            <button class="nav-btn active">
-                <img src="../source/svgs/Home_Off.svg" alt="Inicio">
-            </button>
-            <button class="nav-btn">
-                <img src="../source/svgs/Reservation_Off.svg" alt="Reservas">
-            </button>
-            <button class="nav-btn">
-                <img src="../source/svgs/Search_Off.svg" alt="Buscar">
-            </button>
-            <button class="nav-btn">
-                <img src="../source/svgs/Movie_Off.svg" alt="Buscar">
-            </button>
-            <button class="nav-btn">
-                <img src="../source/svgs/Account_Off.svg" alt="Buscar">
-            </button>
-        </nav>
+      </div>
+      <!-- Bottom nav -->
+      <nav class="bottom-nav">
+        <button class="nav-btn">
+          <img src="../source/svgs/Home_Off.svg" alt="Inicio" />
+        </button>
+        <button class="nav-btn">
+          <img src="../source/svgs/Reservation_Off.svg" alt="Reservas" />
+        </button>
+        <button class="nav-btn">
+          <img src="../source/svgs/Search_Off.svg" alt="Buscar" />
+        </button>
+        <button class="nav-btn">
+          <img src="../source/svgs/Movie_Off.svg" alt="Reels" />
+        </button>
+        <button class="nav-btn active">
+          <img src="../source/svgs/Account_On.svg" alt="Perfil" />
+        </button>
+      </nav>
     </div>
     <script src="../js/main.js"></script>
-</body>
-
+  </body>
 </html>

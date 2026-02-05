@@ -1,0 +1,405 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap');
+
+body {
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Content */
+.content {
+    flex: 0 1 auto;
+    overflow-y: auto;
+    width: 100%;
+    background-color: var(--bg);
+    transition: margin-bottom 0.3s ease;
+}
+
+.content.keyboard-active {
+    margin-bottom: 330px;
+}
+
+/* Header */
+.search-header {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    padding: 66px 20px 20px 20px;
+    background-color: var(--bg);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+}
+
+.logo {
+    height: 40px;
+    width: auto;
+}
+
+.page-title {
+    font-size: 18px;
+    font-weight: 500;
+    color: var(--color-main-2);
+    margin: 0;
+}
+
+/* Buscador - ahora dentro del header */
+.search-container {
+    flex: 1;
+    padding: 0;
+    background-color: transparent;
+}
+
+.search-box {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: white;
+    border: 1px solid #E5E5E5;
+    border-radius: 50px;
+    padding: 12px 20px;
+    transition: border-color 0.2s ease;
+}
+
+.search-box.active {
+    border-color: var(--color-main, #269088);
+}
+
+.search-box svg {
+    flex-shrink: 0;
+}
+
+.search-input {
+    flex: 1;
+    border: none;
+    outline: none;
+    font-size: 14px;
+    color: var(--color-main-2);
+    cursor: pointer;
+    user-select: none;
+}
+
+.search-input::placeholder {
+    color: #9CA3AF;
+}
+
+/* Filtros */
+.filters-container {
+    display: flex;
+    gap: 10px;
+    padding: 0 20px 20px 20px;
+    overflow-x: auto;
+    background-color: var(--bg);
+    scrollbar-width: none;
+}
+
+.filters-container::-webkit-scrollbar {
+    display: none;
+}
+
+.filter-chip {
+    background: #D1D5DB;
+    border: none;
+    border-radius: 20px;
+    padding: 0;
+    font-size: 14px;
+    font-weight: 500;
+    color: #1F2937;
+    cursor: pointer;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.2s ease;
+}
+
+/* Botones con iconos - tamaño fijo según Figma */
+.filter-chip:has(.material-symbols-outlined) {
+    width: 53px;
+    height: 24px;
+    min-width: 53px;
+}
+
+/* Botón "Todos" - ancho automático */
+.filter-chip:not(:has(.material-symbols-outlined)) {
+    padding: 0 20px;
+    height: 24px;
+    min-width: auto;
+}
+
+.filter-chip.active {
+    background: var(--color-main, #269088);
+    color: white;
+}
+
+.filter-chip .material-symbols-outlined {
+    font-size: 18px;
+    color: #1F2937;
+    transition: color 0.2s ease;
+}
+
+.filter-chip.active .material-symbols-outlined {
+    color: white;
+}
+
+/* Instalaciones */
+.installations-section {
+    padding: 0 20px 20px 20px;
+    background-color: var(--bg);
+}
+
+.installation-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    margin-bottom: 16px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+}
+
+.installation-link {
+    display: block;
+    text-decoration: none;
+}
+
+.installation-image {
+    width: 100%;
+    height: 180px;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+    display: flex;
+    align-items: flex-start;
+    padding: 16px;
+}
+
+.installation-image::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.2);
+    pointer-events: none;
+}
+
+.installation-label {
+    background: white;
+    border-radius: 20px;
+    padding: 8px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--color-main-2);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    position: relative;
+    z-index: 1;
+}
+
+.installation-label img {
+    flex-shrink: 0;
+    display: block;
+}
+
+.installation-location {
+    padding: 12px 16px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.installation-location img {
+    flex-shrink: 0;
+    display: block;
+}
+
+.installation-location span {
+    font-size: 14px;
+    color: var(--color-main-2);
+}
+
+/* Scrollbar personalizada */
+.content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: var(--gray-2);
+    border-radius: 3px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+    background: var(--gray-3);
+}
+
+/* iOS Keyboard Styles */
+.keyboard-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 999;
+}
+
+.keyboard-overlay.active {
+    opacity: 1;
+    visibility: visible;
+}
+
+.ios-keyboard {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #D1D5DB;
+    border-radius: 16px 16px 0 0;
+    padding: 8px;
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+    z-index: 1000;
+    box-shadow: 0 -4px 20px rgba(0, 0, 0, 0.2);
+}
+
+.ios-keyboard.active {
+    transform: translateY(0);
+}
+
+.keyboard-toolbar {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 16px;
+    background: #D1D5DB;
+    border-bottom: 1px solid #9CA3AF;
+}
+
+.toolbar-btn {
+    background: none;
+    border: none;
+    color: var(--color-main, #269088);
+    font-size: 16px;
+    font-weight: 400;
+    cursor: pointer;
+    padding: 4px 8px;
+}
+
+.toolbar-btn.done {
+    font-weight: 600;
+}
+
+.keyboard-rows {
+    padding: 4px;
+}
+
+.keyboard-row {
+    display: flex;
+    justify-content: center;
+    gap: 6px;
+    margin-bottom: 8px;
+}
+
+.keyboard-row.bottom-row {
+    gap: 6px;
+}
+
+.key {
+    background: white;
+    border: none;
+    border-radius: 6px;
+    min-width: 32px;
+    height: 42px;
+    font-size: 22px;
+    font-weight: 400;
+    color: #000;
+    cursor: pointer;
+    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.3);
+    transition: all 0.1s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    user-select: none;
+}
+
+.key:active {
+    background: #D1D5DB;
+    transform: scale(0.95);
+}
+
+.key.shift,
+.key.delete {
+    background: #AEB4BE;
+    color: #000;
+    min-width: 42px;
+}
+
+.key.shift.active {
+    background: white;
+    color: #000;
+}
+
+.key.numbers {
+    background: #AEB4BE;
+    color: #000;
+    min-width: 48px;
+    font-size: 16px;
+}
+
+.key.space {
+    flex: 1;
+    font-size: 16px;
+}
+
+.key.return {
+    background: var(--color-main, #269088);
+    color: white;
+    min-width: 84px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.key svg {
+    width: 20px;
+    height: 20px;
+    pointer-events: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 375px) {
+    .key {
+        min-width: 28px;
+        height: 38px;
+        font-size: 20px;
+    }
+    
+    .keyboard-row {
+        gap: 4px;
+    }
+    
+    .key.shift,
+    .key.delete {
+        min-width: 38px;
+    }
+}
+
+@media (min-width: 414px) {
+    .key {
+        min-width: 36px;
+        height: 44px;
+        font-size: 24px;
+    }
+    
+    .keyboard-row {
+        gap: 7px;
+    }
+}
