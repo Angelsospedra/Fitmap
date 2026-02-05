@@ -17,7 +17,7 @@
 
     <section class="reels-container">
 
-      <!-- REEL 1 (antes era el segundo) -->
+      <!-- REEL 1 -->
       <article class="reel">
         <video class="reel-video" muted loop playsinline preload="auto">
           <source src="../source/reels/videos/video-salto.mp4" type="video/mp4">
@@ -29,11 +29,13 @@
             <img src="../source/Branding/full_iso.svg" alt="FitMap">
           </div>
 
+          <img class="pause-icon" src="../source/reels/icons/play.svg" alt="Pausa">
+
           <div class="reel-actions">
             <button class="action-btn like-btn">
               <img class="like-img" src="../source/reels/icons/like.svg">
             </button>
-            <button class="action-btn">
+            <button class="action-btn comment-btn">
               <img src="../source/reels/icons/comment.svg">
             </button>
             <button class="action-btn">
@@ -42,10 +44,15 @@
           </div>
 
           <div class="reel-info">
-            <img class="profile-pic" src="../source/imgs/profile_photo.svg">
-            <div class="text">
-              <span class="username">Usuario 1</span>
-              <span class="title">Rutina de piernas</span>
+            <div class="reel-info-content">
+              <img class="profile-pic" src="../source/imgs/profile_photo.svg">
+              <div class="text">
+                <span class="username">Usuario 1</span>
+                <span class="title">Rutina de piernas</span>
+              </div>
+            </div>
+            <div class="video-progress-bar">
+              <div class="progress-fill"></div>
             </div>
           </div>
 
@@ -64,11 +71,13 @@
             <img src="../source/Branding/full_iso.svg" alt="FitMap">
           </div>
 
+          <img class="pause-icon" src="../source/reels/icons/play.svg" alt="Pausa">
+
           <div class="reel-actions">
             <button class="action-btn like-btn">
               <img class="like-img" src="../source/reels/icons/like.svg">
             </button>
-            <button class="action-btn">
+            <button class="action-btn comment-btn">
               <img src="../source/reels/icons/comment.svg">
             </button>
             <button class="action-btn">
@@ -77,17 +86,22 @@
           </div>
 
           <div class="reel-info">
-            <img class="profile-pic" src="../source/imgs/profile_photo.svg">
-            <div class="text">
-              <span class="username">Usuario 2</span>
-              <span class="title">Entrenamiento baloncesto</span>
+            <div class="reel-info-content">
+              <img class="profile-pic" src="../source/imgs/profile_photo.svg">
+              <div class="text">
+                <span class="username">Usuario 2</span>
+                <span class="title">Entrenamiento baloncesto</span>
+              </div>
+            </div>
+            <div class="video-progress-bar">
+              <div class="progress-fill"></div>
             </div>
           </div>
 
         </div>
       </article>
 
-      <!-- REEL  -->
+      <!-- REEL 3 -->
       <article class="reel">
         <video class="reel-video" muted loop playsinline preload="auto">
           <source src="../source/reels/videos/video-salto.mp4" type="video/mp4">
@@ -99,11 +113,13 @@
             <img src="../source/Branding/full_iso.svg" alt="FitMap">
           </div>
 
+          <img class="pause-icon" src="../source/reels/icons/play.svg" alt="Pausa">
+
           <div class="reel-actions">
             <button class="action-btn like-btn">
               <img class="like-img" src="../source/reels/icons/like.svg">
             </button>
-            <button class="action-btn">
+            <button class="action-btn comment-btn">
               <img src="../source/reels/icons/comment.svg">
             </button>
             <button class="action-btn">
@@ -112,10 +128,15 @@
           </div>
 
           <div class="reel-info">
-            <img class="profile-pic" src="../source/imgs/profile_photo.svg">
-            <div class="text">
-              <span class="username">Usuario 2</span>
-              <span class="title">Entrenamiento baloncesto</span>
+            <div class="reel-info-content">
+              <img class="profile-pic" src="../source/imgs/profile_photo.svg">
+              <div class="text">
+                <span class="username">Usuario 3</span>
+                <span class="title">Entrenamiento de salto</span>
+              </div>
+            </div>
+            <div class="video-progress-bar">
+              <div class="progress-fill"></div>
             </div>
           </div>
 
@@ -123,11 +144,6 @@
       </article>
 
     </section>
-
-    <!-- Barra de progreso del video -->
-    <div class="video-progress-bar">
-      <div class="progress-fill"></div>
-    </div>
 
     <!-- BOTTOM NAV -->
     <nav class="bottom-nav">
@@ -150,9 +166,53 @@
 
   </div>
 
+  <!-- Sección de comentarios -->
+  <div class="comments-overlay"></div>
+  <div class="comments-section">
+    <div class="comments-header">
+      <h3 class="comments-title">Comentarios</h3>
+      <button class="close-comments">×</button>
+    </div>
+    
+    <div class="comments-list">
+      <!-- Comentario ejemplo 1 -->
+      <div class="comment">
+        <img class="comment-avatar" src="../source/imgs/profile_photo.svg" alt="Avatar">
+        <div class="comment-content">
+          <div class="comment-username">usuario_fitness</div>
+          <div class="comment-text">¡Excelente rutina! Me encantó 💪</div>
+          <div class="comment-time">Hace 2h</div>
+        </div>
+      </div>
+
+      <!-- Comentario ejemplo 2 -->
+      <div class="comment">
+        <img class="comment-avatar" src="../source/imgs/profile_photo.svg" alt="Avatar">
+        <div class="comment-content">
+          <div class="comment-username">deportista_pro</div>
+          <div class="comment-text">¿Cuántas repeticiones recomiendas?</div>
+          <div class="comment-time">Hace 5h</div>
+        </div>
+      </div>
+
+      <!-- Comentario ejemplo 3 -->
+      <div class="comment">
+        <img class="comment-avatar" src="../source/imgs/profile_photo.svg" alt="Avatar">
+        <div class="comment-content">
+          <div class="comment-username">gym_lover</div>
+          <div class="comment-text">Esto es justo lo que necesitaba para mi entrenamiento 🔥</div>
+          <div class="comment-time">Hace 1d</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="comments-input-container">
+      <input type="text" class="comments-input" placeholder="Añade un comentario...">
+      <button class="send-comment-btn">→</button>
+    </div>
+  </div>
 
   <script src="../js/main.js"></script>
-
   <script src="../js/reels.js"></script>
 </body>
 
