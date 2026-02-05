@@ -96,3 +96,42 @@ commentsOverlay.addEventListener('click', closeComments);
 commentsSection.addEventListener('click', (e) => {
     e.stopPropagation();
 });
+
+/* COMPARTIR */
+const shareOverlay = document.querySelector('.share-overlay');
+const shareSection = document.querySelector('.share-section');
+const closeShareBtn = document.querySelector('.close-share');
+const shareBtns = document.querySelectorAll('.share-btn');
+
+// Abrir compartir
+shareBtns.forEach(btn => {
+    btn.addEventListener('click', () => {
+        shareOverlay.classList.add('active');
+        shareSection.classList.add('active');
+        document.body.style.overflow = 'hidden';
+    });
+});
+
+// Cerrar compartir
+function closeShare() {
+    shareOverlay.classList.remove('active');
+    shareSection.classList.remove('active');
+    document.body.style.overflow = '';
+}
+
+closeShareBtn.addEventListener('click', closeShare);
+shareOverlay.addEventListener('click', closeShare);
+
+// Prevenir cierre al hacer click dentro de la sección
+shareSection.addEventListener('click', (e) => {
+    e.stopPropagation();
+});
+
+// Manejo de opciones de compartir
+document.querySelectorAll('.share-option, .share-action-btn').forEach(option => {
+    option.addEventListener('click', () => {
+        console.log('Compartir en:', option.textContent);
+        // Aquí puedes agregar la lógica específica para cada opción
+        closeShare();
+    });
+});
