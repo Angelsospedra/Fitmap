@@ -152,6 +152,25 @@ searchInput.addEventListener('focus', (e) => {
     openKeyboard();
 });
 
+// ===== FUNCIONALIDAD DE FILTROS =====
+
+// Función para filtrar instalaciones por deporte
+function filterInstallations(sport) {
+    const installationCards = document.querySelectorAll('.installation-card');
+    
+    installationCards.forEach(card => {
+        const cardSport = card.getAttribute('data-sport');
+        
+        if (sport === 'all' || cardSport === sport) {
+            // Mostrar la tarjeta
+            card.classList.remove('hidden');
+        } else {
+            // Ocultar la tarjeta
+            card.classList.add('hidden');
+        }
+    });
+}
+
 // Manejo de filtros
 const filterChips = document.querySelectorAll('.filter-chip');
 
@@ -167,7 +186,9 @@ filterChips.forEach(chip => {
         // Activar el chip clickeado
         chip.classList.add('active');
         
-        // Aquí puedes agregar la lógica de filtrado
+        // Filtrar las instalaciones
+        filterInstallations(sport);
+        
         console.log('Filtro seleccionado:', sport);
     });
 });

@@ -4,26 +4,27 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-/* Content */
-.content {
-    flex: 0 1 auto;
-    overflow-y: auto;
-    width: 100%;
-    background-color: var(--bg);
-    transition: margin-bottom 0.3s ease;
+/* Screen layout */
+.screen {
+    display: flex;
+    flex-direction: column;
+    height: 100vh;
+    overflow: hidden;
 }
 
-.content.keyboard-active {
-    margin-bottom: 330px;
-}
-
-/* Header */
+/* Header fijo */
 .search-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
     display: flex;
     align-items: center;
     gap: 16px;
-    padding: 66px 20px 20px 20px;
+    padding: 66px 20px 12px 20px;
     background-color: var(--bg);
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo-container {
@@ -44,7 +45,7 @@ body {
     margin: 0;
 }
 
-/* Buscador - ahora dentro del header */
+/* Buscador */
 .search-container {
     flex: 1;
     padding: 0;
@@ -84,14 +85,20 @@ body {
     color: #9CA3AF;
 }
 
-/* Filtros */
+/* Filtros fijos */
 .filters-container {
+    position: fixed;
+    top: 130px; /* Ajustar según la altura del header */
+    left: 0;
+    right: 0;
     display: flex;
     gap: 10px;
-    padding: 0 20px 20px 20px;
+    padding: 12px 20px;
     overflow-x: auto;
     background-color: var(--bg);
     scrollbar-width: none;
+    z-index: 99;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .filters-container::-webkit-scrollbar {
@@ -143,9 +150,24 @@ body {
     color: white;
 }
 
+/* Content desplazable */
+.content {
+    flex: 1;
+    overflow-y: auto;
+    width: 100%;
+    background-color: var(--bg);
+    margin-top: 188px; /* Altura del header + filtros */
+    transition: margin-bottom 0.3s ease;
+    padding-bottom: 80px; /* Espacio para el navbar */
+}
+
+.content.keyboard-active {
+    margin-bottom: 330px;
+}
+
 /* Instalaciones */
 .installations-section {
-    padding: 0 20px 20px 20px;
+    padding: 20px;
     background-color: var(--bg);
 }
 
@@ -197,6 +219,12 @@ body {
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
     position: relative;
     z-index: 1;
+}
+
+.installation-label .material-symbols-outlined {
+    font-size: 18px;
+    color: var(--color-main, #269088);
+    flex-shrink: 0;
 }
 
 .installation-label img {
