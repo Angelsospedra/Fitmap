@@ -77,9 +77,16 @@
     border-radius: 50%;
 }
 
+.reel-info .text {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
 .username,
 .title {
     font-size: 16px;
+    display: block;
 }
 
 .title {
