@@ -237,20 +237,7 @@ line-height: normal;
     align-self: stretch;
 }
 
-
-
-/* =========================
-   9. SCROLLBAR
-========================= */
-.screen::-webkit-scrollbar {
-    width: 6px;
-}
-
-.screen::-webkit-scrollbar-track {
-    background: transparent;
-}
-
-.screen::-webkit-scrollbar-thumb {
-    background: var(--gray-3);
-    border-radius: 3px;
+.btn-confirm a {
+    color: white;
+    text-decoration: none;
 }
