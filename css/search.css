@@ -15,10 +15,9 @@ body {
     display: flex;
     align-items: center;
     gap: 16px;
-    padding: 66px 20px 12px 20px;
+    padding: 66px 20px 0px 20px;
     background-color: var(--bg);
     z-index: 100;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .logo-container {
@@ -82,12 +81,12 @@ body {
 /* Filtros fijos */
 .filters-container {
     position: fixed;
-    top: 130px; /* Ajustar según la altura del header */
+    top: 118px;
     left: 0;
     right: 0;
     display: flex;
     gap: 10px;
-    padding: 12px 20px;
+    padding: 8px 20px 12px 20px;
     overflow-x: auto;
     background-color: var(--bg);
     scrollbar-width: none;
@@ -150,7 +149,7 @@ body {
     overflow-y: auto;
     width: 100%;
     background-color: var(--bg);
-    padding-top: 188px; /* Altura del header + filtros */
+    padding-top: 170px;
     padding-bottom: 95px; /* Espacio para el navbar (75px height + 20px extra) */
     transition: padding-bottom 0.3s ease;
 }
