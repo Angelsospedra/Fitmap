@@ -1,5 +1,10 @@
 /* Importa la fuente Poppins de Google Fonts */
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+
+/* Aplicar Poppins globalmente */
+* {
+  font-family: "Poppins", Arial, Helvetica, sans-serif;
+}
 
 /* =========================
    PROFILE PAGE STYLES
@@ -53,9 +58,8 @@
 
 .edit-btn {
   background: none;
-  border: none;
+  border:none;
   color: var(--color-main-1);
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -86,7 +90,6 @@
   justify-content: center;
   align-items: center;
   gap: 10px;
-  border: none;
   border-radius: 25px;
   background-color: var(--color-main-1);
   cursor: pointer;
@@ -95,7 +98,6 @@
     transform 0.2s ease;
   color: var(--grey-scale-grey-scale-white, #f5f5f5);
   text-align: center;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -122,10 +124,8 @@
   align-items: center;
   gap: 10px;
   background: none;
-  border: none;
   color: #c41e3a;
   font-size: 20px;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
@@ -172,7 +172,6 @@
   align-self: center;
   color: var(--main-main-black, #141414);
   text-align: center;
-  font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 22px;
   font-style: normal;
   font-weight: 500;
@@ -213,7 +212,6 @@
 }
 
 .form-group label {
-  font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 20px;
   font-style: normal;
   font-weight: 400;
@@ -231,15 +229,13 @@
   align-self: stretch;
   border-radius: 20.5px;
   border: 1px solid var(--main-main-black, #141414);
-  background: var(--grey-scale-grey-scale-white, #fbfbfb);
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
+  background: var(--grey-scale-grey-scale-white, #FBFBFB);
   font-size: 16px;
   color: var(--gray-4, #464646);
   box-sizing: border-box;
 }
 
 .form-group input::placeholder {
-  font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -264,11 +260,10 @@
   height: 40px;
   text-align: center;
   font-weight: 300;
-  background: var(--grey-scale-grey-scale-white, #fbfbfb);
+  background: var(--grey-scale-grey-scale-white, #FBFBFB);
   border-radius: 20.5px;
   border: 1px solid var(--main-main-black, #141414);
   padding: 6px 0;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 16px;
   color: var(--gray-4, #464646);
   box-sizing: border-box;
@@ -279,12 +274,103 @@
   height: 40px;
   border-radius: 20.5px;
   border: 1px solid var(--main-main-black, #141414);
-  background: var(--grey-scale-grey-scale-white, #fbfbfb);
+  background: var(--grey-scale-grey-scale-white, #FBFBFB);
   padding: 6px 19px 6px 20px;
-  font-family: "Poppins", Arial, Helvetica, sans-serif;
   font-size: 16px;
   color: var(--gray-4, #464646);
   box-sizing: border-box;
+}
+
+/* =========================
+   PREFERENCES PAGE STYLES
+========================= */
+
+/* Select de deporte en formulario */
+.sport-select {
+  width: 300px;
+  height: 40px;
+  padding: 6px 19px 6px 20px;
+  border-radius: 20.5px;
+  border: 1px solid var(--main-main-black, #141414);
+  background: var(--grey-scale-grey-scale-white, #FBFBFB);
+  font-size: 16px;
+  color: var(--gray-4, #464646);
+  box-sizing: border-box;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23141414' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px;
+  padding-right: 35px;
+}
+
+.sport-select:focus {
+  outline: none;
+  border-color: var(--color-main-1, #269088);
+  background-color: white;
+}
+
+/* Item de deporte con select debajo */
+.sport-item {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  width: 100%;
+}
+
+.sport-item .settings-text {
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+  color: var(--main-main-black, #141414);
+  margin: 0;
+  padding: 0 16px;
+}
+
+/* Select de deporte en settings */
+.sport-select-settings {
+  width: 100%;
+  height: 40px;
+  padding: 6px 35px 6px 20px;
+  border-radius: 20.5px;
+  border: 1px solid var(--main-main-black, #141414);
+  background: var(--grey-scale-grey-scale-white, #FBFBFB);
+  font-size: 16px;
+  color: var(--gray-4, #464646);
+  box-sizing: border-box;
+  cursor: pointer;
+  appearance: none;
+  background-image: url("data:image/svg+xml;charset=UTF-8,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23141414' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3e%3cpolyline points='6 9 12 15 18 9'%3e%3c/polyline%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: right 10px center;
+  background-size: 20px;
+}
+
+.sport-select-settings:focus {
+  outline: none;
+  background-color: white;
+}
+
+/* Toggle dentro de form-group */
+.toggle-form-group {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  max-width: none;
+  width: 100%;
+}
+
+.toggle-form-group label {
+  font-size: 20px;
+  margin: 0;
+  flex: 1;
+}
+
+.toggle-form-group .toggle-btn {
+  flex-shrink: 0;
 }
 
 /* =========================
@@ -298,7 +384,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 20px 20px 200px 20px;
+  padding: 20px 20px 20px 20px;
   gap: 20px;
   width: 100%;
   flex: 1;
@@ -316,7 +402,6 @@
 }
 
 .settings-group-title {
-  font-family: Poppins, Arial, Helvetica, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
@@ -342,6 +427,10 @@
   gap: 12px;
 }
 
+.settings-item-editable {
+  padding-right: 8px;
+}
+
 .settings-label {
   display: flex;
   align-items: center;
@@ -350,13 +439,46 @@
 }
 
 .settings-text {
-  font-family: Poppins, Arial, Helvetica, sans-serif;
-  font-size: 16px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: normal;
   color: var(--main-main-black, #141414);
   margin: 0;
+}
+
+.settings-value {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+  color: #999999;
+  margin: 0;
+  flex: 0 0 auto;
+}
+
+/* =====================
+   BOTÓN EDITAR (ICONO)
+===================== */
+.edit-icon-btn {
+  background: none;
+  cursor: pointer;
+  padding: 4px;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: opacity 0.2s ease;
+  flex-shrink: 0;
+}
+
+.edit-icon-btn:hover {
+  opacity: 0.7;
+}
+
+.edit-icon-btn svg {
+  width: 16px;
+  height: 16px;
 }
 
 /* =====================
@@ -402,6 +524,183 @@
   right: 4px;
 }
 
+/* =========================
+   MODALES
+========================= */
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  animation: fadeIn 0.3s ease;
+}
+
+.modal-overlay.hidden {
+  display: none;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.modal-content {
+  background: white;
+  border-radius: 20.5px;
+  padding: 32px 24px;
+  width: 90%;
+  max-width: 340px;
+  animation: popIn 0.3s ease;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+}
+
+.modal-title {
+  font-size: 22px;
+  font-weight: 600;
+  color: var(--main-main-black, #141414);
+  margin: 0 0 24px 0;
+  text-align: center;
+}
+
+.modal-input,
+.modal-select {
+  width: 100%;
+  height: 40px;
+  padding: 8px 16px;
+  border: 1px solid var(--main-main-black, #141414);
+  border-radius: 20.5px;
+  font-size: 16px;
+  color: var(--gray-4, #464646);
+  background: var(--grey-scale-grey-scale-white, #FBFBFB);
+  box-sizing: border-box;
+  margin-bottom: 24px;
+}
+
+.modal-input::placeholder {
+  color: #999999;
+}
+
+.modal-input:focus,
+.modal-select:focus {
+  outline: none;
+  border-color: var(--color-main-1, #269088);
+  background: white;
+}
+
+.modal-select {
+  cursor: pointer;
+  padding-right: 12px;
+}
+
+.modal-select option {
+  padding: 8px;
+}
+
+.modal-buttons {
+  display: flex;
+  gap: 12px;
+  justify-content: center;
+}
+
+.modal-btn {
+  flex: 1;
+  height: 40px;
+  border-radius: 20.5px;
+  font-size: 14px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.cancel-btn {
+  background: #e0e0e0;
+  color: var(--main-main-black, #141414);
+}
+
+.cancel-btn:hover {
+  background: #d0d0d0;
+  transform: translateY(-2px);
+}
+
+.confirm-btn {
+  background: var(--color-main-1, #269088);
+  color: white;
+}
+
+.confirm-btn:hover {
+  background: #1f7570;
+  transform: translateY(-2px);
+}
+
 a {
   text-decoration: none;
+}
+
+/* =========================
+   BOTÓN SOBRE FITMAP
+========================= */
+
+.about-btn {
+  display: flex;
+  width: 245px;
+  height: 55px;
+  padding: 10px;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  border: none;
+  border-radius: 62px;
+  background: var(--main-main-dark-cyan, #269088);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+  font-size: 18px;
+  font-weight: 500;
+  line-height: normal;
+  margin-top: 40px;
+}
+
+.about-btn:hover {
+  background-color: #1f7570;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(38, 144, 136, 0.3);
+}
+
+.about-btn:active {
+  transform: translateY(0);
+}
+
+.about-btn svg {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+}
+
+.about-btn-icon {
+  width: 40px;
+  height: 40px;
+  flex-shrink: 0;
+  filter: brightness(0) invert(1);
 }
