@@ -19,7 +19,6 @@
     <link rel="preload" as="image" href="../source/svgs/Account_On.svg" />
     <link rel="preload" as="image" href="../source/svgs/Account_Off.svg" />
   </head>
-
   <body>
     <div class="screen">
       <!-- Contenido de la pantalla -->
@@ -31,76 +30,56 @@
         <button class="back-btn" onclick="location.href = 'profile.html'">
           <img src="../source/svgs/arrowback.svg" alt="Volver" />
         </button>
-
-        <!-- Contenedor principal de datos personales -->
-        <div class="personal-info-container">
-          <!-- Formulario de información personal -->
-          <form class="personal-info-form">
-            <!-- Nombre -->
-            <div class="form-group">
-              <label for="firstname">Nombre</label>
-              <input
-                type="text"
-                id="firstname"
-                name="firstname"
-                placeholder="Juan"
-                value="Juan"
-              />
+        <!-- Contenedor principal de preferencias deportivas -->
+        <div class="settings-container">
+          <!-- Grupo de preferencias (Select de deporte) -->
+          <div class="settings-group">
+            
+            <!-- Deporte preferido -->
+            <div class="sport-item">
+              <span class="settings-text">Deporte preferido</span>
+              <select id="sport" name="sport" class="sport-select-settings">
+                <option value="">Selecciona un deporte</option>
+                <option value="futbol">Fútbol</option>
+                <option value="baloncesto">Baloncesto</option>
+                <option value="tennis">Tennis</option>
+                <option value="padel">Pádel</option>
+                <option value="voleibol">Voleibol</option>
+                <option value="badminton">Bádminton</option>
+                <option value="natacion">Natación</option>
+                <option value="ciclismo">Ciclismo</option>
+              </select>
             </div>
+          </div>
 
-            <!-- Apellidos -->
-            <div class="form-group">
-              <label for="lastname">Apellidos</label>
-              <input
-                type="text"
-                id="lastname"
-                name="lastname"
-                placeholder="Garcia Sanchez"
-                value="Garcia Sanchez"
-              />
-            </div>
-
-            <!-- Email -->
-            <div class="form-group">
-              <label for="email">Correo</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="juan@mail.com"
-                value="juan@mail.com"
-              />
-            </div>
-
-            <!-- Teléfono con código país -->
-            <div class="form-group">
-              <label for="phone">Teléfono</label>
-              <div class="phone-input-group">
-                <input
-                  type="text"
-                  id="country-code"
-                  class="country-code"
-                  placeholder="+34"
-                  value="+34"
-                  readonly
-                />
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  class="phone-number"
-                  placeholder="604204512"
-                  value="604204512"
-                />
+          <!-- Grupo de toggles -->
+          <div class="settings-group">
+            
+            <!-- Disponible -->
+            <div class="settings-item">
+              <div class="settings-label">
+                <span class="settings-text">Disponible</span>
               </div>
+              <button class="toggle-btn" data-toggle="available">
+                <div class="toggle-circle"></div>
+              </button>
             </div>
-          </form>
+
+            <!-- Cerca de mi -->
+            <div class="settings-item">
+              <div class="settings-label">
+                <span class="settings-text">Cerca de mi</span>
+              </div>
+              <button class="toggle-btn" data-toggle="nearby">
+                <div class="toggle-circle"></div>
+              </button>
+            </div>
+          </div>
         </div>
       </div>
-
       <!-- Bottom nav -->
       <nav class="bottom-nav">
-        <button class="nav-btn active">
+        <button class="nav-btn">
           <img src="../source/svgs/Home_Off.svg" alt="Inicio" />
         </button>
         <button class="nav-btn">
@@ -117,6 +96,8 @@
         </button>
       </nav>
     </div>
+
+    <script src="../js/preferences.js"></script>
     <script src="../js/main.js"></script>
   </body>
 </html>
