@@ -81,7 +81,7 @@ body {
 /* Filtros fijos */
 .filters-container {
     position: fixed;
-    top: 118px;
+    top: 110px;
     left: 0;
     right: 0;
     display: flex;
@@ -91,7 +91,6 @@ body {
     background-color: var(--bg);
     scrollbar-width: none;
     z-index: 99;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
 }
 
 .filters-container::-webkit-scrollbar {
