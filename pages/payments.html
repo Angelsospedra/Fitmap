@@ -1,107 +1,50 @@
-<!doctype html>
-<html lang="es">
+<!DOCTYPE html>
+<html>
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=393, initial-scale=1.0" />
-    <title>Fitmap - Metodos de Pago</title>
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/navbar.css" />
-    <link rel="stylesheet" href="../css/profile.css" />
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
-    <link rel="preload" as="image" href="../source/svgs/Home_On.svg" />
-    <link rel="preload" as="image" href="../source/svgs/Home_Off.svg" />
-    <link rel="preload" as="image" href="../source/svgs/Reservation_On.svg" />
-    <link rel="preload" as="image" href="../source/svgs/Reservation_Off.svg" />
-    <link rel="preload" as="image" href="../source/svgs/Search_On.svg" />
-    <link rel="preload" as="image" href="../source/svgs/Search_Of.svg" />
-    <link rel="preload" as="image" href="../source/svgs/Movie_On.svg" />
-    <link rel="preload" as="image" href="../source/svgs/Movie_Off.svg" />
-    <link rel="preload" as="image" href="../source/svgs/Account_On.svg" />
-    <link rel="preload" as="image" href="../source/svgs/Account_Off.svg" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta charset="utf-8" />
+    <link rel="stylesheet" href="../css/payments.css" />
+        <link rel="stylesheet" href="../css/main.css" />
+                <link rel="stylesheet" href="../css/navbar.css" />
+
+
   </head>
-
   <body>
-    <div class="screen">
-      <!-- Contenido de la pantalla -->
-      <div class="content">
-        <!-- Header con botón atrás y título -->
-        <div class="personal-info-header">
-          <h1 class="page-title">Metodos de Pago</h1>
+    <div class="metodos-de-pago">
+      <img class="more-icons-high" src="../source/svgs/ArrowBack.svg" href="profile.html" />
+      <div class="frame">
+        <div class="text-wrapper">Metodos de pago</div>
+        <div class="div">
+          <div class="text-wrapper-2">Actuales</div>
+          <div class="frame-2">
+            <img class="img" src="../source/svgs/Credit Card.svg" />
+            <div class="text-wrapper-3">Juan Garcia<br />***** ***** **23</div>
+            <img class="more-icons-high-2" src="../source/svgs/Editar.svg" />
+          </div>
+          <div class="frame-2">
+            <img class="img" src="../source/svgs/Payments.svg" />
+            <div class="text-wrapper-3">Pago en efectivo</div>
+            <img class="more-icons-high-2" src="../source/svgs/Editar.svg" />
+          </div>
         </div>
-        <button class="back-btn" onclick="location.href = 'profile.html'">
-          <img src="../source/svgs/arrowback.svg" alt="Volver" />
-        </button>
-
-        <!-- Contenedor principal de datos personales -->
-        <div class="personal-info-container">
-          <!-- Formulario de información personal -->
-          <form class="personal-info-form">
-            <!-- Nombre -->
-            <div class="form-group">
-              <label for="firstname">Nombre</label>
-              <input
-                type="text"
-                id="firstname"
-                name="firstname"
-                placeholder="Juan"
-                value="Juan"
-              />
-            </div>
-
-            <!-- Apellidos -->
-            <div class="form-group">
-              <label for="lastname">Apellidos</label>
-              <input
-                type="text"
-                id="lastname"
-                name="lastname"
-                placeholder="Garcia Sanchez"
-                value="Garcia Sanchez"
-              />
-            </div>
-
-            <!-- Email -->
-            <div class="form-group">
-              <label for="email">Correo</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                placeholder="juan@mail.com"
-                value="juan@mail.com"
-              />
-            </div>
-
-            <!-- Teléfono con código país -->
-            <div class="form-group">
-              <label for="phone">Teléfono</label>
-              <div class="phone-input-group">
-                <input
-                  type="text"
-                  id="country-code"
-                  class="country-code"
-                  placeholder="+34"
-                  value="+34"
-                  readonly
-                />
-                <input
-                  type="tel"
-                  id="phone"
-                  name="phone"
-                  class="phone-number"
-                  placeholder="604204512"
-                  value="604204512"
-                />
-              </div>
-            </div>
-          </form>
+        <div class="frame-3">
+          <div class="text-wrapper-2">Agregar</div>
+          <div class="div-2">
+            <img class="img" src="../source/svgs/Bitcoin.svg" />
+            <div class="text-wrapper-4">Bitcoin</div>
+            <img class="more-icons-high-2" src="../source/svgs/Editar.svg" />
+          </div>
+          <div class="div-2">
+            <img class="img" src="../source/svgs/Credit Card.svg" />
+            <div class="text-wrapper-4">Otros metodos</div>
+            <img class="more-icons-high-2" src="../source/svgs/Editar.svg" />
+          </div>
         </div>
       </div>
-
-      <!-- Bottom nav -->
+      <!-- Bottom Nav -->
       <nav class="bottom-nav">
-        <button class="nav-btn">
-          <img src="../source/svgs/Home_Off.svg" alt="Inicio" />
+        <button class="nav-btn active">
+          <img src="../source/svgs/Home_On.svg" alt="Inicio" />
         </button>
         <button class="nav-btn">
           <img src="../source/svgs/Reservation_Off.svg" alt="Reservas" />
@@ -112,11 +55,10 @@
         <button class="nav-btn">
           <img src="../source/svgs/Movie_Off.svg" alt="Reels" />
         </button>
-        <button class="nav-btn active">
-          <img src="../source/svgs/Account_On.svg" alt="Perfil" />
+        <button class="nav-btn">
+          <img src="../source/svgs/Account_Off.svg" alt="Perfil" />
         </button>
       </nav>
     </div>
-    <script src="../js/main.js"></script>
   </body>
 </html>

@@ -1,0 +1,344 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css");
+* {
+  -webkit-font-smoothing: antialiased;
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0px;
+  height: 100%;
+      font-family: 'Poppins', Arial, Helvetica, sans-serif;
+
+}
+/* a blue color as a generic focus style */
+button:focus-visible {
+  outline: 2px solid #4a90e2 !important;
+  outline: -webkit-focus-ring-color auto 5px !important;
+}
+a {
+  text-decoration: none;
+}
+.metodos-de-pago {
+  background-color: var(--variable-collection-grey-scale-grey-scale-white);
+  width: 100%;
+  min-width: 393px;
+  min-height: 854px;
+  display: flex;
+  flex-direction: column;
+}
+
+.metodos-de-pago .more-icons-high {
+  z-index: 1;
+  margin-left: 25px;
+  width: 40px;
+  height: 40px;
+  margin-top: 68px;
+}
+
+.metodos-de-pago .frame {
+  z-index: 2;
+  margin-left: 45px;
+  width: 301px;
+  height: 594px;
+  margin-top: 27px;
+  gap: 27px;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.metodos-de-pago .text-wrapper {
+  justify-content: center;
+  align-self: stretch;
+  height: 47px;
+  margin-top: -1.00px;
+  font-weight: 400;
+  font-family: "Poppins";
+  font-weight: var(--medium-22-poppins-medium-font-weight);
+  color: #000000;
+  font-size: var(--medium-22-poppins-medium-font-size);
+  text-align: center;
+  letter-spacing: var(--medium-22-poppins-medium-letter-spacing);
+  line-height: var(--medium-22-poppins-medium-line-height);
+  position: relative;
+  display: flex;
+  align-items: center;
+  font-style: var(--medium-22-poppins-medium-font-style);
+}
+
+.metodos-de-pago .div {
+  gap: 22px;
+  align-self: stretch;
+  width: 100%;
+  flex: 0 0 auto;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.metodos-de-pago .text-wrapper-2 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 132.39px;
+  height: 22.72px;
+  margin-top: -1.00px;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+        font-weight: 400;
+
+  color: var(--variable-collection-grey-scale-grey-scale-black);
+  font-size: var(--medium-20-poppins-medium-font-size);
+  letter-spacing: var(--medium-20-poppins-medium-letter-spacing);
+  line-height: var(--medium-20-poppins-medium-line-height);
+  white-space: nowrap;
+  font-style: var(--medium-20-poppins-medium-font-style);
+}
+
+.metodos-de-pago .frame-2 {
+  display: flex;
+  width: 301px;
+  height: 66px;
+  align-items: center;
+  gap: 17px;
+  padding: 13px 12px;
+  position: relative;
+  background-color: var(--variable-collection-grey-scale-grey-scale-white);
+  border-radius: 20.5px;
+  border: 1px solid;
+  border-color: var(--variable-collection-main-main-black);
+}
+
+.metodos-de-pago .img {
+  position: relative;
+  width: 40px;
+  height: 40px;
+}
+
+.metodos-de-pago .text-wrapper-3 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 177px;
+  height: 22px;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+  font-weight: var(--medium-16-poppins-medium-font-weight);
+  color: #575757;
+  font-size: var(--medium-16-poppins-medium-font-size);
+  letter-spacing: var(--medium-16-poppins-medium-letter-spacing);
+  line-height: var(--medium-16-poppins-medium-line-height);
+  font-style: var(--medium-16-poppins-medium-font-style);
+}
+
+.metodos-de-pago .more-icons-high-2 {
+  position: relative;
+  width: 26px;
+  height: 26px;
+}
+
+.metodos-de-pago .frame-3 {
+  height: 199px;
+  gap: 22px;
+  align-self: stretch;
+  width: 100%;
+  display: flex;
+  position: relative;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.metodos-de-pago .div-2 {
+  width: 301px;
+  height: 66px;
+  gap: 17px;
+  padding: 13px 12px;
+  background-color: var(--variable-collection-main-main-dark-cyan);
+  border-radius: 20.5px;
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.metodos-de-pago .text-wrapper-4 {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 177px;
+  height: 22px;
+    font-family: 'Poppins', Arial, Helvetica, sans-serif;
+      font-weight: var(--medium-16-poppins-medium-font-weight);
+  color: var(--variable-collection-grey-scale-grey-scale-black);
+  font-size: var(--medium-16-poppins-medium-font-size);
+  letter-spacing: var(--medium-16-poppins-medium-letter-spacing);
+  line-height: var(--medium-16-poppins-medium-line-height);
+  font-style: var(--medium-16-poppins-medium-font-style);
+}
+
+.metodos-de-pago .barra-nav-high {
+  display: flex;
+  z-index: 3;
+  width: 393px;
+  height: 75px;
+  align-items: center;
+  justify-content: center;
+  gap: 35px;
+  padding: 19px 10px 20px;
+  position: fixed;
+  top: 779px;
+  left: 0;
+  background: linear-gradient(
+    180deg,
+    rgba(0, 0, 0, 0.81) 63%,
+    rgba(0, 0, 0, 0.9) 100%
+  );
+  overflow-y: scroll;
+}
+
+.metodos-de-pago .barra-nav-high::-webkit-scrollbar {
+  width: 0;
+  display: none;
+}
+:root {
+  --medium-22-poppins-medium-font-family: "Poppins", Helvetica;
+  --medium-22-poppins-medium-font-weight: 500;
+  --medium-22-poppins-medium-font-size: 22px;
+  --medium-22-poppins-medium-letter-spacing: 0px;
+  --medium-22-poppins-medium-line-height: normal;
+  --medium-22-poppins-medium-font-style: normal;
+  --medium-20-poppins-medium-font-family: "Poppins", Helvetica;
+  --medium-20-poppins-medium-font-weight: 500;
+  --medium-20-poppins-medium-font-size: 20px;
+  --medium-20-poppins-medium-letter-spacing: 0px;
+  --medium-20-poppins-medium-line-height: normal;
+  --medium-20-poppins-medium-font-style: normal;
+  --medium-18-poppins-medium-font-family: "Poppins", Helvetica;
+  --medium-18-poppins-medium-font-weight: 500;
+  --medium-18-poppins-medium-font-size: 18px;
+  --medium-18-poppins-medium-letter-spacing: 0px;
+  --medium-18-poppins-medium-line-height: normal;
+  --medium-18-poppins-medium-font-style: normal;
+  --medium-16-poppins-medium-font-family: "Poppins", Helvetica;
+  --medium-16-poppins-medium-font-weight: 500;
+  --medium-16-poppins-medium-font-size: 16px;
+  --medium-16-poppins-medium-letter-spacing: 0px;
+  --medium-16-poppins-medium-line-height: normal;
+  --medium-16-poppins-medium-font-style: normal;
+  --medium-14-poppins-medium-font-family: "Poppins", Helvetica;
+  --medium-14-poppins-medium-font-weight: 500;
+  --medium-14-poppins-medium-font-size: 14px;
+  --medium-14-poppins-medium-letter-spacing: 0px;
+  --medium-14-poppins-medium-line-height: normal;
+  --medium-14-poppins-medium-font-style: normal;
+  --bold-22-poppins-bold-font-family: "Poppins", Helvetica;
+  --bold-22-poppins-bold-font-weight: 700;
+  --bold-22-poppins-bold-font-size: 22px;
+  --bold-22-poppins-bold-letter-spacing: 0px;
+  --bold-22-poppins-bold-line-height: normal;
+  --bold-22-poppins-bold-font-style: normal;
+  --bold-20-poppins-bold-font-family: "Poppins", Helvetica;
+  --bold-20-poppins-bold-font-weight: 700;
+  --bold-20-poppins-bold-font-size: 20px;
+  --bold-20-poppins-bold-letter-spacing: 0px;
+  --bold-20-poppins-bold-line-height: normal;
+  --bold-20-poppins-bold-font-style: normal;
+  --bold-18-poppins-bold-font-family: "Poppins", Helvetica;
+  --bold-18-poppins-bold-font-weight: 700;
+  --bold-18-poppins-bold-font-size: 18px;
+  --bold-18-poppins-bold-letter-spacing: 0px;
+  --bold-18-poppins-bold-line-height: normal;
+  --bold-18-poppins-bold-font-style: normal;
+  --bold-16-poppins-bold-font-family: "Poppins", Helvetica;
+  --bold-16-poppins-bold-font-weight: 700;
+  --bold-16-poppins-bold-font-size: 16px;
+  --bold-16-poppins-bold-letter-spacing: 0px;
+  --bold-16-poppins-bold-line-height: normal;
+  --bold-16-poppins-bold-font-style: normal;
+  --bold-14-poppins-bold-font-family: "Poppins", Helvetica;
+  --bold-14-poppins-bold-font-weight: 700;
+  --bold-14-poppins-bold-font-size: 14px;
+  --bold-14-poppins-bold-letter-spacing: 0px;
+  --bold-14-poppins-bold-line-height: normal;
+  --bold-14-poppins-bold-font-style: normal;
+  --regular-22-poppins-regular-font-family: "Poppins", Helvetica;
+  --regular-22-poppins-regular-font-weight: 400;
+  --regular-22-poppins-regular-font-size: 22px;
+  --regular-22-poppins-regular-letter-spacing: 0px;
+  --regular-22-poppins-regular-line-height: normal;
+  --regular-22-poppins-regular-font-style: normal;
+  --regular-20-poppins-regular-font-family: "Poppins", Helvetica;
+  --regular-20-poppins-regular-font-weight: 400;
+  --regular-20-poppins-regular-font-size: 20px;
+  --regular-20-poppins-regular-letter-spacing: 0px;
+  --regular-20-poppins-regular-line-height: normal;
+  --regular-20-poppins-regular-font-style: normal;
+  --regular-18-poppins-regular-font-family: "Poppins", Helvetica;
+  --regular-18-poppins-regular-font-weight: 400;
+  --regular-18-poppins-regular-font-size: 18px;
+  --regular-18-poppins-regular-letter-spacing: 0px;
+  --regular-18-poppins-regular-line-height: normal;
+  --regular-18-poppins-regular-font-style: normal;
+  --regular-16-poppins-regular-font-family: "Poppins", Helvetica;
+  --regular-16-poppins-regular-font-weight: 400;
+  --regular-16-poppins-regular-font-size: 16px;
+  --regular-16-poppins-regular-letter-spacing: 0px;
+  --regular-16-poppins-regular-line-height: normal;
+  --regular-16-poppins-regular-font-style: normal;
+  --regular-14-poppins-regular-font-family: "Poppins", Helvetica;
+  --regular-14-poppins-regular-font-weight: 400;
+  --regular-14-poppins-regular-font-size: 14px;
+  --regular-14-poppins-regular-letter-spacing: 0px;
+  --regular-14-poppins-regular-line-height: normal;
+  --regular-14-poppins-regular-font-style: normal;
+  --light-22-poppins-light-font-family: "Poppins", Helvetica;
+  --light-22-poppins-light-font-weight: 300;
+  --light-22-poppins-light-font-size: 22px;
+  --light-22-poppins-light-letter-spacing: 0px;
+  --light-22-poppins-light-line-height: normal;
+  --light-22-poppins-light-font-style: normal;
+  --light-20-poppins-light-font-family: "Poppins", Helvetica;
+  --light-20-poppins-light-font-weight: 300;
+  --light-20-poppins-light-font-size: 20px;
+  --light-20-poppins-light-letter-spacing: 0px;
+  --light-20-poppins-light-line-height: normal;
+  --light-20-poppins-light-font-style: normal;
+  --light-18-poppins-light-font-family: "Poppins", Helvetica;
+  --light-18-poppins-light-font-weight: 300;
+  --light-18-poppins-light-font-size: 18px;
+  --light-18-poppins-light-letter-spacing: 0px;
+  --light-18-poppins-light-line-height: normal;
+  --light-18-poppins-light-font-style: normal;
+  --light-16-poppins-light-font-family: "Poppins", Helvetica;
+  --light-16-poppins-light-font-weight: 300;
+  --light-16-poppins-light-font-size: 16px;
+  --light-16-poppins-light-letter-spacing: 0px;
+  --light-16-poppins-light-line-height: normal;
+  --light-16-poppins-light-font-style: normal;
+  --light-14-poppins-light-font-family: "Poppins", Helvetica;
+  --light-14-poppins-light-font-weight: 300;
+  --light-14-poppins-light-font-size: 14px;
+  --light-14-poppins-light-letter-spacing: 0px;
+  --light-14-poppins-light-line-height: normal;
+  --light-14-poppins-light-font-style: normal;
+  --variable-collection-main-main-light-cyan: rgba(91, 205, 196, 1);
+  --variable-collection-main-main-dark-cyan: rgba(38, 144, 136, 1);
+  --variable-collection-main-main-black: rgba(20, 20, 20, 1);
+  --variable-collection-main-main-white: rgba(224, 224, 224, 1);
+  --variable-collection-details-details-purple: rgba(144, 122, 214, 1);
+  --variable-collection-details-details-dark-purple: rgba(79, 81, 140, 1);
+  --variable-collection-details-details-dark-light-purple: rgba(96, 97, 142, 1);
+  --variable-collection-grey-scale-grey-scale-white: rgba(251, 251, 251, 1);
+  --variable-collection-grey-scale-grey-scale-light-grey: rgba(193, 193, 193, 1);
+  --variable-collection-grey-scale-grey-scale-medium-grey: rgba(
+    122,
+    122,
+    122,
+    1
+  );
+  --variable-collection-grey-scale-grey-scale-dark-grey: rgba(70, 70, 70, 1);
+  --variable-collection-grey-scale-grey-scale-black: rgba(30, 30, 30, 1);
+}
