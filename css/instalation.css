@@ -146,8 +146,8 @@ body {
 }
 
 .star {
-    width: 32px;
-    height: 32px;
+    width: 40px;
+    height: 40px;
 }
 
 /* Review cards */
@@ -191,8 +191,8 @@ body {
 }
 
 .star-small {
-    width: 16px;
-    height: 16px;
+    width: 20px;
+    height: 20px;
 }
 
 .review-text {
