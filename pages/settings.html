@@ -1,174 +1,188 @@
 <!doctype html>
 <html lang="es">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=393, initial-scale=1.0" />
-    <title>Fitmap - Ajustes</title>
-    <link rel="stylesheet" href="../css/main.css" />
-    <link rel="stylesheet" href="../css/navbar.css" />
-    <link rel="stylesheet" href="../css/profile.css" />
-    <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
-    <link rel="preload" as="image" href="../source/svgs/Home_On.svg" />
-    <link rel="preload" as="image" href="../source/svgs/Home_Off.svg" />
-    <link rel="preload" as="image" href="../source/svgs/Reservation_On.svg" />
-    <link rel="preload" as="image" href="../source/svgs/Reservation_Off.svg" />
-    <link rel="preload" as="image" href="../source/svgs/Search_On.svg" />
-    <link rel="preload" as="image" href="../source/svgs/Search_Of.svg" />
-    <link rel="preload" as="image" href="../source/svgs/Movie_On.svg" />
-    <link rel="preload" as="image" href="../source/svgs/Movie_Off.svg" />
-    <link rel="preload" as="image" href="../source/svgs/Account_On.svg" />
-    <link rel="preload" as="image" href="../source/svgs/Account_Off.svg" />
-  </head>
-  <body>
-    <div class="screen">
-      <!-- Contenido de la pantalla -->
-      <div class="content">
-        <!-- Header con botón atrás y título -->
-        <div class="personal-info-header">
-          <h1 class="page-title">Ajustes</h1>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=393, initial-scale=1.0" />
+  <title>Fitmap - Ajustes</title>
+  <link rel="stylesheet" href="../css/main.css" />
+  <link rel="stylesheet" href="../css/navbar.css" />
+  <link rel="stylesheet" href="../css/profile.css" />
+  <link rel="shortcut icon" href="../favicon.ico" type="image/x-icon" />
+  <link rel="preload" as="image" href="../source/svgs/Home_On.svg" />
+  <link rel="preload" as="image" href="../source/svgs/Home_Off.svg" />
+  <link rel="preload" as="image" href="../source/svgs/Reservation_On.svg" />
+  <link rel="preload" as="image" href="../source/svgs/Reservation_Off.svg" />
+  <link rel="preload" as="image" href="../source/svgs/Search_On.svg" />
+  <link rel="preload" as="image" href="../source/svgs/Search_Of.svg" />
+  <link rel="preload" as="image" href="../source/svgs/Movie_On.svg" />
+  <link rel="preload" as="image" href="../source/svgs/Movie_Off.svg" />
+  <link rel="preload" as="image" href="../source/svgs/Account_On.svg" />
+  <link rel="preload" as="image" href="../source/svgs/Account_Off.svg" />
+</head>
+
+<body>
+  <div class="screen">
+    <!-- Contenido de la pantalla -->
+    <div class="content">
+      <!-- Header con botón atrás y título -->
+      <div class="personal-info-header">
+        <h1 class="page-title">Ajustes</h1>
+      </div>
+      <button class="back-btn" onclick="location.href = 'home.html'">
+        <img src="../source/svgs/arrowback.svg" alt="Volver" />
+      </button>
+      <!-- Contenedor principal de ajustes -->
+      <div class="settings-container">
+        <!-- Grupo de preferencias (Toggles) -->
+        <div class="settings-group">
+
+          <!-- Notificaciones -->
+          <div class="settings-item">
+            <div class="settings-label">
+              <span class="settings-text">Notificaciones</span>
+            </div>
+            <button class="toggle-btn" data-toggle="notifications">
+              <div class="toggle-circle"></div>
+            </button>
+          </div>
+          <!-- Sonido -->
+          <div class="settings-item">
+            <div class="settings-label">
+              <span class="settings-text">Sonido</span>
+            </div>
+            <button class="toggle-btn" data-toggle="sound">
+              <div class="toggle-circle"></div>
+            </button>
+          </div>
+          <!-- Modo oscuro -->
+          <div class="settings-item">
+            <div class="settings-label">
+              <span class="settings-text">Modo oscuro</span>
+            </div>
+            <button class="toggle-btn" data-toggle="darkmode">
+              <div class="toggle-circle"></div>
+            </button>
+          </div>
+          <!-- Marketing -->
+          <div class="settings-item">
+            <div class="settings-label">
+              <span class="settings-text">Recibir sugerencias</span>
+            </div>
+            <button class="toggle-btn" data-toggle="marketing">
+              <div class="toggle-circle"></div>
+            </button>
+          </div>
         </div>
-        <button class="back-btn" onclick="location.href = 'home.html'">
-          <img src="../source/svgs/arrowback.svg" alt="Volver" />
-        </button>
-        <!-- Contenedor principal de ajustes -->
-        <div class="settings-container">
-          <!-- Grupo de preferencias (Toggles) -->
-          <div class="settings-group">
-            
-            <!-- Notificaciones -->
-            <div class="settings-item">
-              <div class="settings-label">
-                <span class="settings-text">Notificaciones</span>
-              </div>
-              <button class="toggle-btn" data-toggle="notifications">
-                <div class="toggle-circle"></div>
-              </button>
+
+        <!-- Grupo de configuración (Ubicación e Idioma) -->
+        <div class="settings-group">
+          <!-- Ubicación -->
+          <div class="settings-item settings-item-editable">
+            <div class="settings-label">
+              <span class="settings-text">Ubicación</span>
             </div>
-            <!-- Sonido -->
-            <div class="settings-item">
-              <div class="settings-label">
-                <span class="settings-text">Sonido</span>
-              </div>
-              <button class="toggle-btn" data-toggle="sound">
-                <div class="toggle-circle"></div>
-              </button>
-            </div>
-            <!-- Modo oscuro -->
-            <div class="settings-item">
-              <div class="settings-label">
-                <span class="settings-text">Modo oscuro</span>
-              </div>
-              <button class="toggle-btn" data-toggle="darkmode">
-                <div class="toggle-circle"></div>
-              </button>
-            </div>
-            <!-- Marketing -->
-            <div class="settings-item">
-              <div class="settings-label">
-                <span class="settings-text">Recibir sugerencias</span>
-              </div>
-              <button class="toggle-btn" data-toggle="marketing">
-                <div class="toggle-circle"></div>
-              </button>
-            </div>
+            <div class="settings-value" id="location-display">Valencia, España</div>
+            <button class="edit-icon-btn" id="location-btn" aria-label="Editar ubicación">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12.1464 1.85355C12.9525 1.04738 14.2475 1.04738 15.0537 1.85355C15.8598 2.65973 15.8598 3.95491 15.0537 4.76109L4.5 15.3147H1V11.8147L11.5537 1.26109C12.3598 0.454908 13.6549 0.454908 14.461 1.26109L12.1464 1.85355ZM13.5 3.5L14.5 2.5L13.5 1.5L12.5 2.5L13.5 3.5Z"
+                  fill="#464646" />
+              </svg>
+            </button>
           </div>
 
-          <!-- Grupo de configuración (Ubicación e Idioma) -->
-          <div class="settings-group">
-            <!-- Ubicación -->
-            <div class="settings-item settings-item-editable">
-              <div class="settings-label">
-                <span class="settings-text">Ubicación</span>
-              </div>
-              <div class="settings-value" id="location-display">Valencia, España</div>
-              <button class="edit-icon-btn" id="location-btn" aria-label="Editar ubicación">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12.1464 1.85355C12.9525 1.04738 14.2475 1.04738 15.0537 1.85355C15.8598 2.65973 15.8598 3.95491 15.0537 4.76109L4.5 15.3147H1V11.8147L11.5537 1.26109C12.3598 0.454908 13.6549 0.454908 14.461 1.26109L12.1464 1.85355ZM13.5 3.5L14.5 2.5L13.5 1.5L12.5 2.5L13.5 3.5Z" fill="#464646"/>
-                </svg>
-              </button>
+          <!-- Idioma -->
+          <div class="settings-item settings-item-editable">
+            <div class="settings-label">
+              <span class="settings-text">Idioma</span>
             </div>
-
-            <!-- Idioma -->
-            <div class="settings-item settings-item-editable">
-              <div class="settings-label">
-                <span class="settings-text">Idioma</span>
-              </div>
-              <div class="settings-value" id="language-display">Español</div>
-              <button class="edit-icon-btn" id="language-btn" aria-label="Editar idioma">
-                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                  <path d="M12.1464 1.85355C12.9525 1.04738 14.2475 1.04738 15.0537 1.85355C15.8598 2.65973 15.8598 3.95491 15.0537 4.76109L4.5 15.3147H1V11.8147L11.5537 1.26109C12.3598 0.454908 13.6549 0.454908 14.461 1.26109L12.1464 1.85355ZM13.5 3.5L14.5 2.5L13.5 1.5L12.5 2.5L13.5 3.5Z" fill="#464646"/>
-                </svg>
-              </button>
-            </div>
+            <div class="settings-value" id="language-display">Español</div>
+            <button class="edit-icon-btn" id="language-btn" aria-label="Editar idioma">
+              <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M12.1464 1.85355C12.9525 1.04738 14.2475 1.04738 15.0537 1.85355C15.8598 2.65973 15.8598 3.95491 15.0537 4.76109L4.5 15.3147H1V11.8147L11.5537 1.26109C12.3598 0.454908 13.6549 0.454908 14.461 1.26109L12.1464 1.85355ZM13.5 3.5L14.5 2.5L13.5 1.5L12.5 2.5L13.5 3.5Z"
+                  fill="#464646" />
+              </svg>
+            </button>
           </div>
-
-          <!-- Botón Sobre FitMap -->
-          <button class="about-btn">
-            <img src="../source/Branding/LogoLocation.svg" alt="FitMap" class="about-btn-icon" />
-            Sobre FitMap
-          </button>
         </div>
-      </div>
-      <!-- Bottom nav -->
-      <nav class="bottom-nav">
-        <button class="nav-btn">
-          <img src="../source/svgs/Home_Off.svg" alt="Inicio" />
-        </button>
-        <button class="nav-btn">
-          <img src="../source/svgs/Reservation_Off.svg" alt="Reservas" />
-        </button>
-        <button class="nav-btn">
-          <img src="../source/svgs/Search_Off.svg" alt="Buscar" />
-        </button>
-        <button class="nav-btn">
-          <img src="../source/svgs/Movie_Off.svg" alt="Reels" />
-        </button>
-        <button class="nav-btn">
-          <img src="../source/svgs/Account_Off.svg" alt="Perfil" />
-        </button>
-      </nav>
-    </div>
 
-    <!-- Modal para editar ubicación -->
-    <div id="location-modal" class="modal-overlay hidden">
-      <div class="modal-content">
-        <h2 class="modal-title">Editar ubicación</h2>
-        <input 
-          type="text" 
-          id="location-input" 
-          class="modal-input" 
-          placeholder="Ej: Valencia, España"
-        />
-        <div class="modal-buttons">
-          <button class="modal-btn cancel-btn" id="location-cancel">Cancelar</button>
-          <button class="modal-btn confirm-btn" id="location-confirm">Guardar</button>
-        </div>
+        <!-- Botón Sobre FitMap -->
+        <button class="about-btn">
+          <img src="../source/Branding/LogoLocation.svg" alt="FitMap" class="about-btn-icon" />
+          Sobre FitMap
+        </button>
       </div>
     </div>
+    <!-- Bottom nav -->
+    <nav class="bottom-nav">
+      <button class="nav-btn">
+        <img src="../source/svgs/Home_Off.svg" alt="Inicio" />
+      </button>
+      <button class="nav-btn">
+        <img src="../source/svgs/Reservation_Off.svg" alt="Reservas" />
+      </button>
+      <button class="nav-btn">
+        <img src="../source/svgs/Search_Off.svg" alt="Buscar" />
+      </button>
+      <button class="nav-btn">
+        <img src="../source/svgs/Movie_Off.svg" alt="Reels" />
+      </button>
+      <button class="nav-btn">
+        <img src="../source/svgs/Account_Off.svg" alt="Perfil" />
+      </button>
+    </nav>
+  </div>
 
-    <!-- Modal para editar idioma -->
-    <div id="language-modal" class="modal-overlay hidden">
-      <div class="modal-content">
-        <h2 class="modal-title">Editar idioma</h2>
-        <select id="language-select" class="modal-select">
-          <option value="Español">Español</option>
-          <option value="Inglés">Inglés</option>
-          <option value="Francés">Francés</option>
-          <option value="Alemán">Alemán</option>
-          <option value="Portugués">Portugués</option>
-          <option value="Italiano">Italiano</option>
-          <option value="Catalán">Catalán</option>
-          <option value="Gallego">Gallego</option>
-          <option value="Vasco">Vasco</option>
-        </select>
-        <div class="modal-buttons">
-          <button class="modal-btn cancel-btn" id="language-cancel">Cancelar</button>
-          <button class="modal-btn confirm-btn" id="language-confirm">Guardar</button>
-        </div>
+  <!-- Modal para editar ubicación -->
+  <div id="location-modal" class="modal-overlay hidden">
+    <div class="modal-content">
+      <h2 class="modal-title">Editar ubicación</h2>
+      <input type="text" id="location-input" class="modal-input" placeholder="Ej: Valencia, España" />
+      <div class="modal-buttons">
+        <button class="modal-btn cancel-btn" id="location-cancel">Cancelar</button>
+        <button class="modal-btn confirm-btn" id="location-confirm">Guardar</button>
       </div>
     </div>
+  </div>
 
-    <script src="../js/settings.js"></script>
-    <script src="../js/main.js"></script>
-  </body>
+  <!-- Modal para editar idioma -->
+  <div id="language-modal" class="modal-overlay hidden">
+    <div class="modal-content">
+      <h2 class="modal-title">Editar idioma</h2>
+
+      <div class="custom-select-wrapper" id="languageDropdown">
+        <div class="custom-select-trigger">
+          <span class="custom-select-value">Español</span>
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="#141414" stroke-width="2"
+            stroke-linecap="round" stroke-linejoin="round">
+            <polyline points="6 9 12 15 18 9"></polyline>
+          </svg>
+        </div>
+        <ul class="custom-select-options">
+          <li data-value="Español" class="selected">Español</li>
+          <li data-value="Inglés">Inglés</li>
+          <li data-value="Francés">Francés</li>
+          <li data-value="Alemán">Alemán</li>
+          <li data-value="Portugués">Portugués</li>
+          <li data-value="Italiano">Italiano</li>
+          <li data-value="Catalán">Catalán</li>
+          <li data-value="Gallego">Gallego</li>
+          <li data-value="Vasco">Vasco</li>
+        </ul>
+        <input type="hidden" id="language-select" value="Español">
+      </div>
+
+      <div class="modal-buttons">
+        <button class="modal-btn cancel-btn" id="language-cancel">Cancelar</button>
+        <button class="modal-btn confirm-btn" id="language-confirm">Guardar</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="../js/settings.js"></script>
+  <script src="../js/main.js"></script>
+</body>
+
 </html>

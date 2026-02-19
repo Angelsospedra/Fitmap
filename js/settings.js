@@ -171,34 +171,70 @@ class SettingsManager {
   setupLanguageEditable() {
     const languageBtn = document.getElementById('language-btn');
     const languageModal = document.getElementById('language-modal');
-    const languageSelect = document.getElementById('language-select');
     const languageCancel = document.getElementById('language-cancel');
     const languageConfirm = document.getElementById('language-confirm');
     const languageDisplay = document.getElementById('language-display');
 
-    if (!languageBtn || !languageModal) return;
+    // Referencias al custom select
+    const wrapper = document.getElementById('languageDropdown');
+    const trigger = wrapper?.querySelector('.custom-select-trigger');
+    const valueSpan = wrapper?.querySelector('.custom-select-value');
+    const hiddenInput = wrapper?.querySelector('input[type="hidden"]');
+    const optionItems = wrapper?.querySelectorAll('.custom-select-options li');
 
-    // Abrir modal
+    if (!languageBtn || !languageModal || !wrapper) return;
+
+    // Marca la opción activa visualmente
+    const syncSelected = (value) => {
+      optionItems.forEach((li) => {
+        li.classList.toggle('selected', li.dataset.value === value);
+      });
+    };
+
+    // Abrir modal y sincronizar dropdown con valor actual
     languageBtn.addEventListener('click', () => {
-      if (languageDisplay) {
-        languageSelect.value = languageDisplay.textContent;
-      }
+      const current = languageDisplay.textContent.trim();
+      valueSpan.textContent = current;
+      hiddenInput.value = current;
+      syncSelected(current);
       languageModal.classList.remove('hidden');
+    });
+
+    // Abrir/cerrar dropdown
+    trigger.addEventListener('click', () => {
+      wrapper.classList.toggle('open');
+    });
+
+    // Seleccionar opción
+    optionItems.forEach((li) => {
+      li.addEventListener('click', () => {
+        valueSpan.textContent = li.textContent;
+        hiddenInput.value = li.dataset.value;
+        syncSelected(li.dataset.value);
+        wrapper.classList.remove('open');
+      });
+    });
+
+    // Cerrar dropdown al click fuera
+    document.addEventListener('click', (e) => {
+      if (!wrapper.contains(e.target)) wrapper.classList.remove('open');
     });
 
     // Cancelar
     languageCancel.addEventListener('click', () => {
+      wrapper.classList.remove('open');
       languageModal.classList.add('hidden');
     });
 
-    // Confirmar
+    // Guardar
     languageConfirm.addEventListener('click', () => {
-      this.saveLanguage(languageSelect, languageDisplay, languageModal);
+      this.saveLanguage(hiddenInput, languageDisplay, languageModal, wrapper);
     });
 
-    // Cerrar modal al hacer click fuera
+    // Cerrar modal al click en overlay
     languageModal.addEventListener('click', (e) => {
       if (e.target === languageModal) {
+        wrapper.classList.remove('open');
         languageModal.classList.add('hidden');
       }
     });
@@ -207,12 +243,12 @@ class SettingsManager {
   /**
    * Guarda el idioma en localStorage
    */
-  saveLanguage(select, display, modal) {
-    const newLanguage = select.value;
-
+  saveLanguage(hiddenInput, display, modal, wrapper) {
+    const newLanguage = hiddenInput.value;
     if (newLanguage) {
       display.textContent = newLanguage;
       localStorage.setItem('user_language', newLanguage);
+      wrapper.classList.remove('open');
       modal.classList.add('hidden');
       console.log('Idioma actualizado:', newLanguage);
     }
@@ -242,3 +278,4 @@ class SettingsManager {
 document.addEventListener('DOMContentLoaded', () => {
   window.settingsManager = new SettingsManager();
 });
+

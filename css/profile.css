@@ -202,6 +202,7 @@
 }
 
 .form-group {
+  box-sizing: border-box; /* añade esto */
   display: flex;
   flex-direction: column;
   align-items: flex-start;
@@ -287,9 +288,10 @@
 
 /* Select de deporte en formulario */
 .sport-select {
-  width: 300px;
+  width: 100%;          /* cambia de 300px a 100% */
+  max-width: 300px;     /* mantiene el límite visual */
   height: 40px;
-  padding: 6px 19px 6px 20px;
+  padding: 6px 35px 6px 20px;
   border-radius: 20.5px;
   border: 1px solid var(--main-main-black, #141414);
   background: var(--grey-scale-grey-scale-white, #FBFBFB);
@@ -683,4 +685,81 @@ a {
   height: 40px;
   flex-shrink: 0;
   filter: brightness(0) invert(1);
+}
+
+.custom-select-wrapper {
+  position: relative;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.custom-select-trigger {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  padding: 6px 16px 6px 20px;
+  border-radius: 20.5px;
+  border: 1px solid var(--main-main-black, #141414);
+  background: var(--grey-scale-grey-scale-white, #FBFBFB);
+  font-size: 16px;
+  color: var(--gray-4, #464646);
+  cursor: pointer;
+  box-sizing: border-box;
+  user-select: none;
+}
+
+.custom-select-trigger svg {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  transition: transform 0.2s ease;
+}
+
+.custom-select-wrapper.open .custom-select-trigger svg {
+  transform: rotate(180deg);
+}
+
+.custom-select-options {
+  display: none;
+  position: absolute;
+  top: calc(100% + 4px);
+  left: 0;
+  width: 100%;
+  max-height: 260px;
+  overflow-y: auto;
+  background: white;
+  border-radius: 16px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  list-style: none;
+  margin: 0;
+  padding: 8px 0;
+  z-index: 100;
+  box-sizing: border-box;
+}
+
+.custom-select-wrapper.open .custom-select-options {
+  display: block;
+}
+
+.custom-select-options li {
+  padding: 10px 20px;
+  font-size: 16px;
+  color: var(--gray-4, #464646);
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.custom-select-options li:hover {
+  background: #f0f0f0;
+}
+
+.custom-select-options li.selected {
+  background: #e0f5f4;
+  color: var(--color-main-1, #269088);
+  font-weight: 500;
+}
+
+.modal-content .custom-select-wrapper {
+  margin-bottom: 24px;
 }

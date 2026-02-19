@@ -137,3 +137,35 @@ class PreferencesManager {
 document.addEventListener('DOMContentLoaded', () => {
   window.preferencesManager = new PreferencesManager();
 });
+// Custom Select
+const wrapper = document.getElementById('sportDropdown');
+const trigger = wrapper.querySelector('.custom-select-trigger');
+const valueSpan = wrapper.querySelector('.custom-select-value');
+const options = wrapper.querySelectorAll('.custom-select-options li');
+const hiddenInput = document.getElementById('sport');
+
+trigger.addEventListener('click', () => {
+  wrapper.classList.toggle('open');
+});
+
+options.forEach(li => {
+  li.addEventListener('click', () => {
+    // Actualiza visual
+    valueSpan.textContent = li.textContent;
+    hiddenInput.value = li.dataset.value;
+
+    // Marca selected
+    options.forEach(o => o.classList.remove('selected'));
+    li.classList.add('selected');
+
+    // Cierra
+    wrapper.classList.remove('open');
+  });
+});
+
+// Cierra al hacer click fuera
+document.addEventListener('click', (e) => {
+  if (!wrapper.contains(e.target)) {
+    wrapper.classList.remove('open');
+  }
+});
