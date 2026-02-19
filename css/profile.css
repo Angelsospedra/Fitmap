@@ -587,7 +587,6 @@
   width: 100%;
   height: 40px;
   padding: 8px 16px;
-  border: 1px solid var(--main-main-black, #141414);
   border-radius: 20.5px;
   font-size: 16px;
   color: var(--gray-4, #464646);
@@ -625,6 +624,7 @@
 .modal-btn {
   flex: 1;
   height: 40px;
+  border: none;
   border-radius: 20.5px;
   font-size: 14px;
   font-weight: 500;
