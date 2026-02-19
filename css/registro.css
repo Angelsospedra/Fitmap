@@ -224,6 +224,12 @@ padding: 6px 19px 6px 20px;
     font-family: 'Poppins', sans-serif;
     cursor: pointer;
 }
+
+.btn-confirm a {
+    color: white;
+    text-decoration: none;
+}
+
 .spacer{
     display: flex;
     height: 70px;
