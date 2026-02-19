@@ -268,10 +268,6 @@ body {
     border-radius: 3px;
 }
 
-.content::-webkit-scrollbar-thumb:hover {
-    background: var(--gray-3);
-}
-
 /* iOS Keyboard Styles */
 .keyboard-overlay {
     position: fixed;

@@ -57,10 +57,6 @@ body {
     height: 24px;
 }
 
-.settings-btn:hover {
-    opacity: 0.7;
-}
-
 /* Recomendaciones y Completadas - estilos compartidos */
 .recommendations,
 .completed-section {
@@ -90,9 +86,6 @@ body {
     transition: opacity 0.2s;
 }
 
-.card-image-link:hover {
-    opacity: 0.95;
-}
 
 .card-image {
     width: 100%;
@@ -173,8 +166,4 @@ body {
 .content::-webkit-scrollbar-thumb {
     background: var(--gray-2);
     border-radius: 3px;
-}
-
-.content::-webkit-scrollbar-thumb:hover {
-    background: var(--gray-3);
 }

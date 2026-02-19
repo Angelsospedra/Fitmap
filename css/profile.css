@@ -472,10 +472,6 @@
   flex-shrink: 0;
 }
 
-.edit-icon-btn:hover {
-  opacity: 0.7;
-}
-
 .edit-icon-btn svg {
   width: 16px;
   height: 16px;
@@ -639,19 +635,9 @@
   color: var(--main-main-black, #141414);
 }
 
-.cancel-btn:hover {
-  background: #d0d0d0;
-  transform: translateY(-2px);
-}
-
 .confirm-btn {
   background: var(--color-main-1, #269088);
   color: white;
-}
-
-.confirm-btn:hover {
-  background: #1f7570;
-  transform: translateY(-2px);
 }
 
 a {
@@ -680,12 +666,6 @@ a {
   font-weight: 500;
   line-height: normal;
   margin-top: 40px;
-}
-
-.about-btn:hover {
-  background-color: #1f7570;
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(38, 144, 136, 0.3);
 }
 
 .about-btn:active {

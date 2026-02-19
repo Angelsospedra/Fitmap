@@ -99,10 +99,11 @@ body {
     opacity: 0.5;
 }
 
-.arrow-icon {
-    width: 20px;
-    height: 20px;
+.arrow-icon {   
+    width: 40px;
+    height: 40px;
     display: block;
+    margin-top:25px
 }
 
 .logo-container {
@@ -132,7 +133,7 @@ body {
     font-style: normal;
     font-weight: 500;
     line-height: normal;
-    padding-bottom: 20px;
+    padding-bottom: 40px;
 }
 
 /* =========================
