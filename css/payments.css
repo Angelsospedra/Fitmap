@@ -20,7 +20,7 @@ a {
 }
 .metodos-de-pago {
   background-color: var(--variable-collection-grey-scale-grey-scale-white);
-  width: 100%;
+  
   min-width: 393px;
   min-height: 854px;
   display: flex;
