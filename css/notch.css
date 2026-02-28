@@ -1,0 +1,12 @@
+/* iPhone 13 Notch CSS */
+.iphone-notch {
+    position: fixed;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 210px; /* Approximate width of the notch */
+    height: 30px; /* Approximate height of the notch */
+    background-color: black;
+    border-radius: 0 0 20px 20px; /* Rounded bottom corners */
+    z-index: 1000000; /* Ensure it stays on top */
+}
